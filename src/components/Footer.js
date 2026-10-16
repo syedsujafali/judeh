@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="lux-footer">
+    <footer className="bento-footer">
       <div className="container">
-        <div className="lux-footer-grid">
+        <div className="bento-footer-grid">
           {/* Brand Intro */}
           <div>
             <div style={{ position: 'relative', width: '200px', height: '60px', marginBottom: '1.25rem' }}>
@@ -27,9 +27,9 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="lux-footer-col">
+          <div className="bento-footer-col">
             <h4>Practice Areas</h4>
-            <ul className="lux-footer-links">
+            <ul className="bento-footer-links">
               <li><Link href="/valuation">Valuation &amp; Appraisal</Link></li>
               <li><Link href="/realtors">Realtors Team</Link></li>
               <li><Link href="/motivational">Motivational Team</Link></li>
@@ -38,10 +38,10 @@ export default function Footer() {
           </div>
 
           {/* Connect */}
-          <div className="lux-footer-col">
+          <div className="bento-footer-col">
             <h4>Direct Relations</h4>
-            <ul className="lux-footer-links">
-              <li><a href="#contact-section">Schedule a Consultation</a></li>
+            <ul className="bento-footer-links">
+              <li><a href="/#contact-section">Schedule a Consultation</a></li>
               <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Official</a></li>
               <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook Group</a></li>
               <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
@@ -49,11 +49,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="lux-footer-bottom">
+        <div className="bento-footer-bottom">
           <div>
             &copy; 2025 Judeh &amp; Associates, All Rights Reserved.
           </div>
-          <div style={{ color: 'var(--lux-gold-bright)', fontWeight: 700, letterSpacing: '0.04em' }}>
+          <div style={{ color: 'var(--bento-gold)', fontWeight: 700, letterSpacing: '0.04em' }}>
             Service You Can Trust • 30+ Years of Undisputed Client Success
           </div>
         </div>
@@ -61,3 +61,4 @@ export default function Footer() {
     </footer>
   );
 }
+

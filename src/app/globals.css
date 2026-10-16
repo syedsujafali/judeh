@@ -1,50 +1,47 @@
 /* ==========================================================================
-   JUDEH & ASSOCIATES — ULTRA-LUXURY HIGH-END REDESIGN
-   Palette:
-   - Deep Royal Burgundy / Crimson: #680010 & #810014
-   - Brushed Metallic Gold: #c99326 & #e09900
-   - Deep Obsidian Navy: #070e17 & #0d1927
-   - Pristine Pearl / Warm Marble: #fcfbf9
-   - Warm Subtle Borders: rgba(201, 147, 38, 0.2)
+   JUDEH & ASSOCIATES — MODERN ARCHITECTURAL BENTO-GRID REDESIGN
+   Palette (Exact Authentic Brand Colors):
+   - Crimson / Maroon Primary: #810014
+   - Warm Amber Gold Accent: #E09900
+   - Modern Obsidian Dark: #090e17 & #111a28
+   - Clean Off-White / Surface Light: #f8fafc & #ffffff
    ========================================================================== */
 
 :root {
-  --lux-crimson: #730012;
-  --lux-crimson-dark: #4e000c;
-  --lux-crimson-light: #8f0017;
+  --bento-crimson: #810014;
+  --bento-crimson-hover: #5d000e;
+  --bento-crimson-glow: rgba(129, 0, 20, 0.25);
 
-  --lux-gold: #c99326;
-  --lux-gold-bright: #e5aa38;
-  --lux-gold-light: #fbf5e8;
-  --lux-gold-gradient: linear-gradient(135deg, #d8a032 0%, #b8821d 100%);
-  --lux-gold-border: rgba(201, 147, 38, 0.35);
+  --bento-gold: #e09900;
+  --bento-gold-hover: #c48500;
+  --bento-gold-light: #fff8eb;
+  --bento-gold-glow: rgba(224, 153, 0, 0.25);
 
-  --lux-dark: #070e17;
-  --lux-dark-surface: #0e1b2b;
-  --lux-dark-card: #132438;
+  --bento-dark: #090e17;
+  --bento-dark-surface: #101926;
+  --bento-dark-card: #152234;
+  --bento-dark-border: rgba(255, 255, 255, 0.08);
 
-  --lux-bg: #fcfbf9;
-  --lux-white: #ffffff;
+  --bento-light: #f8fafc;
+  --bento-card-light: #ffffff;
+  --bento-border-light: rgba(0, 0, 0, 0.06);
 
-  --lux-text-dark: #0b1320;
-  --lux-text-body: #334155;
-  --lux-text-muted: #64748b;
-  --lux-text-gold: #c99326;
+  --bento-text-main: #0f172a;
+  --bento-text-muted: #64748b;
+  --bento-text-light: #94a3b8;
 
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
-
-  --shadow-lux-sm: 0 4px 15px rgba(7, 14, 23, 0.04);
-  --shadow-lux-card: 0 16px 40px -10px rgba(7, 14, 23, 0.08), 0 4px 12px rgba(7, 14, 23, 0.03);
-  --shadow-lux-elevated: 0 25px 60px -12px rgba(7, 14, 23, 0.16);
-  --shadow-gold-glow: 0 8px 30px rgba(201, 147, 38, 0.25);
-
+  --font-display: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  
   --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
   --radius-full: 9999px;
 
-  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-bento: 0 10px 30px -5px rgba(9, 14, 23, 0.06), 0 4px 10px -2px rgba(9, 14, 23, 0.03);
+  --shadow-bento-hover: 0 20px 40px -10px rgba(9, 14, 23, 0.12), 0 8px 16px -4px rgba(9, 14, 23, 0.05);
+
+  --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -59,10 +56,10 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: var(--lux-bg);
-  color: var(--lux-text-body);
-  line-height: 1.7;
+  font-family: var(--font-display);
+  background-color: var(--bento-light);
+  color: var(--bento-text-main);
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -79,7 +76,7 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1320px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2rem;
@@ -87,775 +84,662 @@ img {
 }
 
 /* ==========================================================================
-   LUXURY TOP BAR
+   DESKTOP TOPBAR (Hidden on Mobile)
    ========================================================================== */
-.lux-topbar {
-  background-color: var(--lux-dark);
-  color: #94a3b8;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.bento-topbar {
+  background-color: var(--bento-dark);
+  color: var(--bento-text-light);
+  font-size: 0.825rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--bento-dark-border);
 }
 
-.lux-topbar-inner {
+.bento-topbar-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
 }
 
-.lux-topbar-links {
+.bento-topbar-links {
   display: flex;
-  align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
-.lux-topbar-links a {
-  color: var(--lux-gold-bright);
+.bento-topbar-links a {
+  color: var(--bento-gold);
   font-weight: 600;
   transition: opacity 0.2s;
 }
 
-.lux-topbar-links a:hover {
-  opacity: 0.8;
+.bento-topbar-links a:hover {
+  text-decoration: underline;
 }
 
 /* ==========================================================================
-   LUXURY FLOATING NAVBAR
+   MODERN STICKY HEADER
    ========================================================================== */
-.lux-navbar {
+.bento-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(252, 251, 249, 0.95);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(201, 147, 38, 0.18);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--bento-border-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
-.lux-nav-inner {
+.bento-header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 96px;
+  height: 86px;
 }
 
-.lux-brand-wrapper {
+.bento-nav-list {
   display: flex;
   align-items: center;
-  gap: 16px;
-}
-
-.lux-brand-title {
-  font-family: var(--font-serif);
-  font-size: 1.85rem;
-  font-weight: 700;
-  color: var(--lux-crimson);
-  letter-spacing: -0.01em;
-  line-height: 1;
-}
-
-.lux-brand-sub {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--lux-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-top: 2px;
-}
-
-.lux-nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
+  gap: 2.25rem;
   list-style: none;
 }
 
-.lux-nav-item a {
-  font-size: 0.925rem;
-  font-weight: 600;
-  color: var(--lux-dark);
-  letter-spacing: 0.02em;
-  padding: 0.5rem 0;
-  position: relative;
+.bento-nav-link {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--bento-text-main);
   transition: var(--transition);
+  position: relative;
+  padding: 0.5rem 0;
 }
 
-.lux-nav-item a:hover,
-.lux-nav-item.active a {
-  color: var(--lux-crimson);
+.bento-nav-link:hover,
+.bento-nav-link.active {
+  color: var(--bento-crimson);
 }
 
-.lux-nav-item.active a::after {
+.bento-nav-link.active::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: var(--lux-gold-gradient);
+  height: 2.5px;
+  background: var(--bento-gold);
+  border-radius: 2px;
 }
 
-.lux-btn-primary {
-  background: var(--lux-gold-gradient);
+.bento-cta-btn {
+  background: var(--bento-crimson);
   color: #ffffff !important;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.8rem 1.75rem;
+  padding: 0.7rem 1.6rem;
   border-radius: var(--radius-full);
-  box-shadow: var(--shadow-gold-glow);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: none;
-  cursor: pointer;
+  box-shadow: 0 4px 14px var(--bento-crimson-glow);
   transition: var(--transition);
 }
 
-.lux-btn-primary:hover {
+.bento-cta-btn:hover {
+  background: var(--bento-crimson-hover);
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(201, 147, 38, 0.4);
+  box-shadow: 0 8px 20px rgba(129, 0, 20, 0.35);
 }
 
-.lux-mobile-btn {
+.bento-mobile-toggle {
   display: none;
   background: none;
-  border: 1px solid var(--lux-gold);
-  color: var(--lux-crimson);
+  border: 1px solid #cbd5e1;
   border-radius: var(--radius-sm);
-  padding: 0.5rem 0.85rem;
-  font-size: 1.25rem;
+  padding: 0.45rem 0.8rem;
+  font-size: 1.35rem;
   cursor: pointer;
 }
 
 /* ==========================================================================
-   LUXURY HERO: HIGH-FASHION EDITORIAL + PROPERTY BACKDROP
+   ARCHITECTURAL HERO (Full-Bleed Background with Centered Typography)
    ========================================================================== */
-.lux-hero-section {
+.bento-hero-section {
   position: relative;
-  min-height: 640px;
-  background-color: var(--lux-dark);
-  color: #ffffff;
-  padding: 7rem 0 6rem;
-  overflow: hidden;
+  min-height: 580px;
   display: flex;
   align-items: center;
-}
-
-.lux-hero-bg {
-  position: absolute;
-  inset: 0;
+  justify-content: center;
   background-size: cover;
   background-position: center 30%;
-  opacity: 0.45;
-  filter: contrast(1.15) brightness(0.9);
+  color: #ffffff;
+  text-align: center;
+  padding: 6rem 1.5rem 7.5rem;
+  overflow: hidden;
 }
 
-.lux-hero-overlay {
+.bento-hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 40%, rgba(201, 147, 38, 0.15) 0%, transparent 65%),
-              linear-gradient(180deg, rgba(7, 14, 23, 0.68) 0%, rgba(7, 14, 23, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(9, 14, 23, 0.72) 0%, rgba(9, 14, 23, 0.94) 100%);
+  z-index: 1;
 }
 
-.lux-hero-grid {
+.bento-hero-content {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  align-items: center;
-  gap: 4.5rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
-.lux-hero-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: rgba(201, 147, 38, 0.12);
-  border: 1px solid var(--lux-gold-border);
-  color: var(--lux-gold-bright);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  padding: 0.45rem 1.25rem;
-  border-radius: var(--radius-full);
-  margin-bottom: 1.5rem;
-}
-
-.lux-hero-headline {
-  font-family: var(--font-serif);
-  font-size: 4.5rem;
-  font-weight: 600;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+.bento-hero-tag {
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
   color: #ffffff;
+  text-transform: uppercase;
+  display: block;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.35rem;
 }
 
-.lux-hero-headline em {
-  font-style: italic;
-  color: var(--lux-gold-bright);
+.bento-hero-title {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
-.lux-hero-desc {
-  font-size: 1.2rem;
-  color: #cbd5e1;
-  line-height: 1.8;
-  max-width: 620px;
-  margin-bottom: 2.75rem;
+.bento-hero-desc {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-.lux-hero-buttons {
+.bento-hero-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 
-.lux-btn-crimson {
-  background: linear-gradient(135deg, var(--lux-crimson) 0%, var(--lux-crimson-dark) 100%);
+.btn-bento-primary {
+  background: var(--bento-crimson);
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 1rem 2.25rem;
-  border-radius: var(--radius-full);
-  box-shadow: 0 8px 25px rgba(115, 0, 18, 0.4);
+  padding: 0.95rem 2.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px var(--bento-crimson-glow);
   transition: var(--transition);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.lux-btn-crimson:hover {
+.btn-bento-primary:hover {
+  background: var(--bento-crimson-hover);
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(115, 0, 18, 0.55);
+  box-shadow: 0 8px 24px rgba(129, 0, 20, 0.4);
+  color: #ffffff;
 }
 
-.lux-btn-outline {
-  border: 1.5px solid var(--lux-gold-border);
+.btn-bento-gold {
+  background: var(--bento-gold);
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 1rem 2rem;
-  border-radius: var(--radius-full);
+  padding: 0.95rem 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px var(--bento-gold-glow);
   transition: var(--transition);
 }
 
-.lux-btn-outline:hover {
-  border-color: var(--lux-gold-bright);
-  color: var(--lux-gold-bright);
-  background: rgba(201, 147, 38, 0.08);
+.btn-bento-gold:hover {
+  background: var(--bento-gold-hover);
+  transform: translateY(-2px);
+  color: #ffffff;
 }
 
-/* Hero Stats Glassmorphism Card */
-.lux-stats-card {
-  background: rgba(19, 36, 56, 0.65);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(201, 147, 38, 0.25);
+/* ==========================================================================
+   ARCHITECTURAL BENTO GRID (The New Structure)
+   ========================================================================== */
+.bento-grid-section {
+  padding: 5rem 0 6rem;
+  margin-top: -3.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.bento-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.75rem;
+}
+
+.bento-card {
+  background: var(--bento-card-light);
   border-radius: var(--radius-lg);
-  padding: 3rem 2.5rem;
-  box-shadow: var(--shadow-lux-elevated);
+  border: 1px solid var(--bento-border-light);
+  box-shadow: var(--shadow-bento);
+  padding: 2.5rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.lux-stat-entry {
-  padding-bottom: 1.75rem;
+.bento-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-bento-hover);
+}
+
+/* Column spans */
+.bento-span-7 {
+  grid-column: span 7;
+}
+
+.bento-span-5 {
+  grid-column: span 5;
+}
+
+.bento-span-4 {
+  grid-column: span 4;
+}
+
+.bento-span-6 {
+  grid-column: span 6;
+}
+
+.bento-span-12 {
+  grid-column: span 12;
+}
+
+/* Dark Bento Theme */
+.bento-card-dark {
+  background: var(--bento-dark-surface);
+  color: #ffffff;
+  border: 1px solid var(--bento-dark-border);
+}
+
+.bento-card-dark:hover {
+  border-color: var(--bento-gold);
+}
+
+.bento-badge-tag {
+  font-size: 0.775rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--bento-gold);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.bento-title-large {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--bento-text-main);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.bento-card-dark .bento-title-large {
+  color: #ffffff;
+}
+
+.bento-desc {
+  font-size: 1rem;
+  color: var(--bento-text-muted);
+  line-height: 1.7;
   margin-bottom: 1.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.lux-stat-entry:last-child {
-  padding-bottom: 0;
-  margin-bottom: 0;
-  border-bottom: none;
+.bento-card-dark .bento-desc {
+  color: #94a3b8;
 }
 
-.lux-stat-number {
-  font-family: var(--font-serif);
-  font-size: 3.25rem;
+.bento-action-link {
+  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--lux-gold-bright);
+  color: var(--bento-crimson);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.bento-card-dark .bento-action-link {
+  color: var(--bento-gold);
+}
+
+.bento-action-link:hover {
+  gap: 0.75rem;
+}
+
+/* Bento Stat Widget */
+.bento-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.bento-stat-item h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--bento-gold);
   line-height: 1;
 }
 
-.lux-stat-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #94a3b8;
+.bento-stat-item p {
+  font-size: 0.8rem;
+  color: #cbd5e1;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   margin-top: 0.4rem;
 }
 
 /* ==========================================================================
-   LUXURY 3-PILLAR CARDS (High-End Gallery Aesthetic)
-   ========================================================================= */
-.lux-pillars-section {
-  padding: 6.5rem 0;
-  background-color: var(--lux-bg);
-}
-
-.lux-section-header {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto 4.5rem;
-}
-
-.lux-eyebrow {
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--lux-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  margin-bottom: 0.75rem;
-  display: block;
-}
-
-.lux-section-title {
-  font-family: var(--font-serif);
-  font-size: 3.25rem;
-  font-weight: 600;
-  color: var(--lux-dark);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-}
-
-.lux-section-subtitle {
-  font-size: 1.15rem;
-  color: var(--lux-text-muted);
-  margin-top: 1rem;
-  line-height: 1.7;
-}
-
-.lux-pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+   STATEMENT PROMO BANNER (Service You Can Trust)
+   ========================================================================== */
+.bento-statement-banner {
+  background: linear-gradient(135deg, var(--bento-crimson) 0%, #4f000b 100%);
+  border-radius: var(--radius-lg);
+  color: #ffffff;
+  padding: 3.75rem 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-bento);
 }
 
-.lux-card {
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(201, 147, 38, 0.2);
-  padding: 3.25rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-  position: relative;
-  box-shadow: var(--shadow-lux-card);
-}
-
-.lux-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--lux-gold-gradient);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  opacity: 0;
-  transition: var(--transition);
-}
-
-.lux-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-lux-elevated);
-  border-color: rgba(201, 147, 38, 0.45);
-}
-
-.lux-card:hover::before {
-  opacity: 1;
-}
-
-.lux-card-icon-wrap {
-  width: 84px;
-  height: 84px;
-  border-radius: var(--radius-md);
-  background: var(--lux-gold-light);
-  border: 1px solid var(--lux-gold-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-  transition: var(--transition);
-}
-
-.lux-card:hover .lux-card-icon-wrap {
-  transform: scale(1.08) rotate(2deg);
-}
-
-.lux-card-meta {
-  font-size: 0.8rem;
+.bento-statement-banner h2 {
+  font-size: 2.35rem;
   font-weight: 800;
-  color: var(--lux-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  margin-bottom: 0.5rem;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
 }
 
-.lux-card-title {
-  font-family: var(--font-serif);
-  font-size: 2.1rem;
-  font-weight: 600;
-  color: var(--lux-crimson);
-  margin-bottom: 1.25rem;
-  line-height: 1.2;
-}
-
-.lux-card-text {
-  font-size: 1.05rem;
-  color: var(--lux-text-body);
-  line-height: 1.75;
-  margin-bottom: 2.25rem;
-  flex-grow: 1;
-}
-
-.lux-card-action {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--lux-crimson);
-  letter-spacing: 0.05em;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  transition: var(--transition);
-}
-
-.lux-card-action:hover {
-  color: var(--lux-gold);
-  gap: 0.9rem;
+.bento-statement-banner p {
+  font-size: 1.15rem;
+  color: #fce7eb;
 }
 
 /* ==========================================================================
-   EXCLUSIVE "SERVICE YOU CAN TRUST" STATEMENT SECTION
+   SUBPAGE ARCHITECTURE & BENTO ELEMENTS
    ========================================================================== */
-.lux-statement-banner {
-  background: linear-gradient(135deg, var(--lux-dark) 0%, #0d1927 100%);
-  border: 1px solid var(--lux-gold-border);
-  border-radius: var(--radius-lg);
-  padding: 4.5rem 4rem;
-  color: #ffffff;
+.subpage-bento-hero {
+  background: #ffffff;
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--bento-border-light);
+}
+
+.subpage-bento-hero-grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
-  margin: 5rem 0;
-  box-shadow: var(--shadow-lux-elevated);
-  position: relative;
-  overflow: hidden;
+  gap: 3.5rem;
 }
 
-.lux-statement-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  background: radial-gradient(circle at 80% 50%, rgba(201, 147, 38, 0.12) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.lux-statement-content h2 {
-  font-family: var(--font-serif);
+.subpage-hero-title {
   font-size: 3rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.01em;
+  font-weight: 900;
+  color: var(--bento-text-main);
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  line-height: 1.15;
 }
 
-.lux-statement-content p {
-  font-size: 1.25rem;
-  color: #cbd5e1;
+.subpage-hero-sub {
+  font-size: 1.2rem;
+  color: var(--bento-text-muted);
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 1.75rem;
 }
 
-/* ==========================================================================
-   LUXURY INNER SUBPAGES (VALUATION, REALTORS, MOTIVATIONAL)
-   ========================================================================== */
-.lux-subpage-hero {
-  background: linear-gradient(180deg, #ffffff 0%, var(--lux-bg) 100%);
-  padding: 5.5rem 0 4.5rem;
-  border-bottom: 1px solid var(--lux-gold-border);
-}
-
-.lux-subpage-grid {
+.subpage-pills-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-}
-
-.lux-subpage-title {
-  font-family: var(--font-serif);
-  font-size: 3.75rem;
-  font-weight: 600;
-  color: var(--lux-dark);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.25rem;
-}
-
-.lux-subpage-desc {
-  font-size: 1.25rem;
-  color: var(--lux-text-body);
-  line-height: 1.8;
-  max-width: 740px;
-  margin-bottom: 2rem;
-}
-
-.lux-contact-meta-row {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.lux-meta-pill {
-  background: #ffffff;
-  border: 1px solid var(--lux-gold-border);
-  padding: 0.6rem 1.4rem;
+.subpage-pill {
+  background: var(--bento-light);
+  border: 1px solid #e2e8f0;
+  padding: 0.55rem 1.25rem;
   border-radius: var(--radius-full);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: var(--lux-dark);
-  box-shadow: var(--shadow-lux-sm);
 }
 
-.lux-meta-pill a {
-  color: var(--lux-crimson);
+.subpage-pill a {
+  color: var(--bento-crimson);
   font-weight: 700;
 }
 
-.lux-logo-emblem {
-  background: #ffffff;
-  border: 1px solid var(--lux-gold-border);
-  border-radius: var(--radius-lg);
-  padding: 2.25rem;
-  box-shadow: var(--shadow-lux-card);
-  flex-shrink: 0;
-}
-
-/* Subpage Detail Cards */
-.lux-grid-cards {
+/* Feature Bento Grid */
+.bento-feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 2.25rem;
-  margin: 3.5rem 0;
+  gap: 1.75rem;
+  margin: 3rem 0;
 }
 
-.lux-feature-card {
+.bento-feature-box {
   background: #ffffff;
+  border: 1px solid var(--bento-border-light);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(201, 147, 38, 0.22);
-  padding: 2.5rem;
-  box-shadow: var(--shadow-lux-card);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-bento);
   transition: var(--transition);
 }
 
-.lux-feature-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--lux-gold);
-  box-shadow: var(--shadow-lux-elevated);
+.bento-feature-box:hover {
+  transform: translateY(-5px);
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-bento-hover);
 }
 
-.lux-feature-card h4 {
-  font-family: var(--font-serif);
-  font-size: 1.85rem;
-  font-weight: 600;
-  color: var(--lux-crimson);
-  margin-bottom: 1rem;
+.bento-feature-box h4 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--bento-crimson);
+  margin-bottom: 0.75rem;
 }
 
-.lux-feature-list {
+.bento-bullet-list {
   list-style: none;
   padding: 0;
 }
 
-.lux-feature-list li {
+.bento-bullet-list li {
   position: relative;
-  padding-left: 1.6rem;
-  margin-bottom: 0.85rem;
-  color: var(--lux-text-body);
-  font-size: 1rem;
-  line-height: 1.6;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--bento-text-main);
+  font-size: 0.95rem;
 }
 
-.lux-feature-list li::before {
-  content: '✦';
+.bento-bullet-list li::before {
+  content: '▸';
   position: absolute;
   left: 0;
-  color: var(--lux-gold);
-  font-size: 0.85rem;
+  color: var(--bento-gold);
+  font-weight: bold;
 }
 
-/* Property Badges Cloud */
-.lux-badge-cloud {
+/* Tags cloud */
+.bento-tags-cloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1.75rem 0;
+  gap: 0.7rem;
+  margin: 1.5rem 0;
 }
 
-.lux-tag {
-  background-color: var(--lux-gold-light);
-  border: 1px solid var(--lux-gold-border);
-  color: var(--lux-dark);
-  font-size: 0.925rem;
-  font-weight: 700;
-  padding: 0.55rem 1.25rem;
+.bento-tag-item {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: var(--bento-text-main);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.45rem 1.1rem;
   border-radius: var(--radius-full);
   transition: var(--transition);
 }
 
-.lux-tag:hover {
-  background-color: var(--lux-gold);
-  color: #ffffff;
+.bento-tag-item:hover {
+  background: var(--bento-gold-light);
+  color: var(--bento-gold);
+  border-color: var(--bento-gold);
 }
 
-/* Luxury Quote Card */
-.lux-quote-card {
+/* Quotes */
+.bento-quote-item {
   background: #ffffff;
-  border-left: 5px solid var(--lux-gold);
+  border-left: 4px solid var(--bento-gold);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  padding: 1.75rem 2rem;
-  margin-bottom: 1.5rem;
-  box-shadow: var(--shadow-lux-card);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-bento);
 }
 
-.lux-quote-card p {
-  font-family: var(--font-serif);
+.bento-quote-item p {
   font-style: italic;
-  font-size: 1.25rem;
-  color: var(--lux-dark);
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--bento-text-main);
+  margin-bottom: 0.4rem;
 }
 
-.lux-quote-card span {
+.bento-quote-item span {
   font-size: 0.85rem;
   font-weight: 800;
-  color: var(--lux-crimson);
+  color: var(--bento-crimson);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 
 /* ==========================================================================
-   CONTACT SECTION & FORM
+   CONTACT SECTION BENTO SPLIT
    ========================================================================== */
-.lux-contact-split {
+.bento-contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin: 5rem 0;
+  gap: 3rem;
+  margin: 4.5rem 0;
 }
 
-.lux-contact-info-panel {
+.bento-contact-card {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--lux-gold-border);
-  padding: 3.5rem;
-  box-shadow: var(--shadow-lux-card);
+  border: 1px solid var(--bento-border-light);
+  padding: 3rem;
+  box-shadow: var(--shadow-bento);
 }
 
-.lux-contact-form-panel {
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--lux-gold-border);
-  padding: 3.5rem;
-  box-shadow: var(--shadow-lux-card);
+.bento-form-group {
+  margin-bottom: 1.4rem;
 }
 
-.lux-form-group {
-  margin-bottom: 1.5rem;
-}
-
-.lux-form-label {
+.bento-form-label {
   display: block;
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--lux-dark);
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: var(--bento-text-main);
+  margin-bottom: 0.45rem;
 }
 
-.lux-input {
+.bento-form-control {
   width: 100%;
-  padding: 0.95rem 1.25rem;
-  border: 1px solid #cbd5e1;
-  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.15rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-md);
   font-family: inherit;
-  font-size: 1rem;
-  color: var(--lux-dark);
-  background: #fafaf9;
+  font-size: 0.975rem;
+  color: var(--bento-text-main);
+  background: #ffffff;
   transition: var(--transition);
 }
 
-.lux-input:focus {
+.bento-form-control:focus {
   outline: none;
-  background: #ffffff;
-  border-color: var(--lux-gold);
-  box-shadow: 0 0 0 4px rgba(201, 147, 38, 0.15);
+  border-color: var(--bento-crimson);
+  box-shadow: 0 0 0 4px var(--bento-crimson-glow);
+}
+
+.btn-bento-submit {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--bento-crimson);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px var(--bento-crimson-glow);
+}
+
+.btn-bento-submit:hover {
+  background: var(--bento-crimson-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(129, 0, 20, 0.35);
 }
 
 /* ==========================================================================
-   LUXURY FOOTER
+   FOOTER (Dark Modern)
    ========================================================================== */
-.lux-footer {
-  background-color: var(--lux-dark);
-  color: #94a3b8;
-  padding: 6rem 0 2.5rem;
-  margin-top: 7rem;
-  border-top: 1px solid var(--lux-gold-border);
+.bento-footer {
+  background-color: var(--bento-dark);
+  color: var(--bento-text-light);
+  padding: 5rem 0 2rem;
+  margin-top: 5rem;
+  border-top: 1px solid var(--bento-dark-border);
 }
 
-.lux-footer-grid {
+.bento-footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 5rem;
-  padding-bottom: 4.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--bento-dark-border);
 }
 
-.lux-footer-col h4 {
-  font-family: var(--font-serif);
-  color: var(--lux-gold-bright);
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+.bento-footer-col h4 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
-.lux-footer-links {
+.bento-footer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
-.lux-footer-links a {
-  color: #cbd5e1;
+.bento-footer-links a {
+  color: var(--bento-text-light);
   font-size: 0.95rem;
   transition: var(--transition);
 }
 
-.lux-footer-links a:hover {
-  color: var(--lux-gold-bright);
-  padding-left: 6px;
+.bento-footer-links a:hover {
+  color: var(--bento-gold);
+  padding-left: 5px;
 }
 
-.lux-footer-bottom {
-  padding-top: 2.25rem;
+.bento-footer-bottom {
+  padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -865,170 +749,134 @@ img {
 }
 
 /* ==========================================================================
-   RESPONSIVENESS
+   FULL RESPONSIVENESS (MOBILE, TABLET, DESKTOP)
    ========================================================================== */
-/* ==========================================================================
-   COMPREHENSIVE RESPONSIVENESS SYSTEM (DESKTOPS, LAPTOPS, TABLETS, PHONES)
-   ========================================================================== */
-@media (max-width: 1200px) {
-  .lux-hero-headline {
-    font-size: 4rem !important;
-  }
-  .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
 @media (max-width: 1024px) {
-  .lux-hero-section {
-    min-height: auto;
-    padding: 5rem 0 4.5rem;
+  .bento-span-7,
+  .bento-span-5,
+  .bento-span-4,
+  .bento-span-6 {
+    grid-column: span 12;
   }
 
-  .lux-hero-headline {
-    font-size: 3.5rem !important;
+  .bento-hero-title {
+    font-size: 3.75rem;
   }
 
-  .lux-pillars-grid {
-    grid-template-columns: 1fr;
-    max-width: 580px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .lux-statement-banner {
+  .bento-statement-banner {
     flex-direction: column;
     text-align: center;
-    padding: 3.5rem 2rem;
+    padding: 3rem 2rem;
   }
 
-  .lux-subpage-grid {
+  .subpage-bento-hero-grid {
     flex-direction: column;
     text-align: center;
-    gap: 2.5rem;
   }
 
-  .lux-contact-split {
+  .bento-contact-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
   }
 
-  .lux-footer-grid {
+  .bento-footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
   }
 }
 
 @media (max-width: 768px) {
-  .lux-topbar {
+  .bento-topbar {
     display: none !important;
   }
 
-  .lux-nav-inner {
-    height: 80px;
+  .bento-header-inner {
+    height: 76px;
   }
 
-  .lux-nav-menu {
+  .bento-nav-list {
     display: none;
     position: absolute;
-    top: 80px;
+    top: 76px;
     left: 0;
     right: 0;
     background: #ffffff;
     flex-direction: column;
     padding: 2rem 1.5rem;
     gap: 1.25rem;
-    border-bottom: 3px solid var(--lux-gold);
-    box-shadow: var(--shadow-lux-elevated);
+    border-bottom: 2px solid var(--bento-gold);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 
-  .lux-nav-menu.open {
+  .bento-nav-list.open {
     display: flex;
   }
 
-  .lux-mobile-btn {
+  .bento-mobile-toggle {
     display: block;
   }
 
-  .lux-btn-primary {
+  .bento-cta-btn {
     display: none;
   }
 
-  .lux-hero-headline {
-    font-size: 2.75rem !important;
+  .bento-hero-tag {
+    font-size: 1.85rem;
   }
 
-  .lux-hero-desc {
-    font-size: 1.1rem;
+  .bento-hero-title {
+    font-size: 2.75rem;
   }
 
-  .lux-hero-buttons {
+  .bento-hero-desc {
+    font-size: 1.15rem;
+  }
+
+  .bento-hero-actions {
     flex-direction: column;
     width: 100%;
-    max-width: 380px;
-    margin: 0 auto;
   }
 
-  .lux-btn-crimson,
-  .lux-btn-outline {
+  .btn-bento-primary,
+  .btn-bento-gold {
     width: 100%;
     justify-content: center;
   }
 
-  .lux-subpage-title {
-    font-size: 2.5rem !important;
-  }
-
-  .lux-subpage-desc {
-    font-size: 1.1rem;
-  }
-
-  .lux-contact-meta-row {
-    justify-content: center;
-  }
-
-  .lux-contact-info-panel,
-  .lux-contact-form-panel {
-    padding: 2.25rem 1.5rem;
-  }
-
-  .lux-card {
-    padding: 2.5rem 1.75rem;
-  }
-
-  .lux-footer {
-    padding: 4.5rem 0 2rem;
-    margin-top: 4.5rem;
-  }
-
-  .lux-footer-grid {
+  .bento-stats-row {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 1.25rem;
+    text-align: center;
   }
 
-  .lux-footer-bottom {
+  .bento-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .bento-contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .bento-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-footer-bottom {
     flex-direction: column;
     text-align: center;
-    gap: 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
-  .lux-hero-headline {
-    font-size: 2.25rem !important;
+  .bento-hero-tag {
+    font-size: 1.5rem;
   }
 
-  .lux-hero-section {
-    padding: 3.5rem 0 3rem;
+  .bento-hero-title {
+    font-size: 2.35rem;
   }
 
-  .lux-subpage-title {
-    font-size: 2.1rem !important;
-  }
-
-  .lux-statement-content h2 {
-    font-size: 2.2rem !important;
+  .subpage-hero-title {
+    font-size: 2.25rem;
   }
 
   .container {

@@ -62,169 +62,182 @@ export default function ValuationPage() {
 
   return (
     <div>
-      {/* Luxury Subpage Header */}
-      <section className="lux-subpage-hero">
-        <div className="container lux-subpage-grid">
-          <div>
-            <span className="lux-eyebrow">Practice Area Overview</span>
-            <h1 className="lux-subpage-title">
-              Real Estate Valuation and Consulting
-            </h1>
-            <p className="lux-subpage-desc">
-              We understand what creates property value, how such value is influenced, and how the characteristics of a property are affected by market conditions.
-            </p>
-            <div className="lux-contact-meta-row">
-              <div className="lux-meta-pill">
-                <span>Direct Line: </span>
-                <a href="tel:3132771986">(313) 277-1986</a>
-              </div>
-              <div className="lux-meta-pill">
-                <span>Executive Email: </span>
-                <a href="mailto:JumanaJ@JudehOnLine.com">JumanaJ@JudehOnLine.com</a>
+      {/* Modern Subpage Hero */}
+      <section className="subpage-bento-hero">
+        <div className="container">
+          <div className="subpage-bento-hero-grid">
+            <div>
+              <span className="bento-badge-tag">Valuation Practice</span>
+              <h1 className="subpage-hero-title">
+                Real Estate Valuation &amp; Consulting
+              </h1>
+              <p className="subpage-hero-sub">
+                We understand what creates property value, how such value is influenced, and how the characteristics of a property are affected by market conditions. Over 30 years of undisputed leadership.
+              </p>
+              <div className="subpage-pills-row">
+                <div className="subpage-pill">
+                  <span>Direct Line: </span>
+                  <a href="tel:3132771986">(313) 277-1986</a>
+                </div>
+                <div className="subpage-pill">
+                  <span>Fax: </span>
+                  <span style={{ fontWeight: 600 }}>(313) 277-8634</span>
+                </div>
+                <div className="subpage-pill">
+                  <span>Coverage: </span>
+                  <span style={{ fontWeight: 600 }}>State of Michigan</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="lux-logo-emblem">
-            <div style={{ position: 'relative', width: '230px', height: '135px' }}>
+            <div style={{ position: 'relative', width: '130px', height: '130px', flexShrink: 0 }}>
               <Image 
                 src="/images/jjlogo-valuation.png" 
-                alt="Judeh Valuation Emblem" 
+                alt="Valuation Seal" 
                 fill 
                 style={{ objectFit: 'contain' }}
-                priority
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Body Content */}
-      <div className="container" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <div className="container" style={{ padding: '3.5rem 2rem 5rem' }}>
         
-        {/* Practice Areas / Client Sectors */}
-        <section>
-          <div className="lux-section-header">
-            <span className="lux-eyebrow">Industry Practice Sectors</span>
-            <h2 className="lux-section-title">Valuation and Consulting For:</h2>
-            <p className="lux-section-subtitle">
-              Delivering authoritative, court-defensible valuations for leading legal, financial, and accounting institutions.
-            </p>
+        {/* Core Value Proposition Bento Card */}
+        <div className="bento-card" style={{ marginBottom: '3.5rem', background: '#ffffff' }}>
+          <span className="bento-badge-tag">Analytical Excellence</span>
+          <h2 className="bento-title-large">Understanding Property Value in Every Market Cycle</h2>
+          <p className="bento-desc" style={{ fontSize: '1.1rem', maxWidth: '900px' }}>
+            We work with you to analyze, summarize, and communicate our conclusions in an effective and understandable manner. 
+            Because each assignment is unique, so are our analytical approaches. Our staff has extensive experience and has 
+            completed thousands of appraisals across the full spectrum of Michigan real property.
+          </p>
+          <div style={{ marginTop: '0.5rem' }}>
+            <Link href="#contact-form" className="btn-bento-primary">
+              Request a Valuation Quote &rarr;
+            </Link>
+          </div>
+        </div>
+
+        {/* Who We Serve - 4 Grid Bento */}
+        <div style={{ marginBottom: '4rem' }}>
+          <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 2.5rem' }}>
+            <span className="bento-badge-tag">Client Categories</span>
+            <h2 className="bento-title-large">Authoritative Advisory for Key Decision Makers</h2>
+            <p className="bento-desc">Tailored analysis designed to withstand scrutiny from lenders, courts, and regulators.</p>
           </div>
 
-          <div className="lux-grid-cards">
-            {clientTypes.map((client, idx) => (
-              <div key={idx} className="lux-feature-card">
-                <h4>{client.title}</h4>
-                <ul className="lux-feature-list">
-                  {client.items.map((item, i) => (
+          <div className="bento-feature-grid">
+            {clientTypes.map((c, idx) => (
+              <div key={idx} className="bento-feature-box">
+                <h4>{c.title}</h4>
+                <ul className="bento-bullet-list">
+                  {c.items.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-        </section>
+        </div>
 
-        {/* Specialized Appraisals: Title Claims & Insurance Damage */}
-        <section style={{ margin: '5rem 0' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(330px, 1fr))', gap: '2.5rem' }}>
+        {/* Specialized Legal & Damage Services - Bento 2 Columns */}
+        <div style={{ marginBottom: '4rem' }}>
+          <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 2.5rem' }}>
+            <span className="bento-badge-tag">Forensic Appraisal Services</span>
+            <h2 className="bento-title-large">Specialized Legal &amp; Damage Valuations</h2>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             {/* Title Claims */}
-            <div className="lux-feature-card" style={{ borderLeft: '6px solid var(--lux-gold)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.5rem' }}>
-                <div style={{ position: 'relative', width: '56px', height: '56px', flexShrink: 0 }}>
+            <div className="bento-feature-box" style={{ borderLeft: '5px solid var(--bento-gold)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.25rem' }}>
+                <div style={{ position: 'relative', width: '52px', height: '52px', flexShrink: 0 }}>
                   <Image src="/images/title-claims.png" alt="Title Claims" fill style={{ objectFit: 'contain' }} />
                 </div>
                 <div>
-                  <h4 style={{ margin: 0, fontSize: '1.6rem' }}>Title Claims</h4>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--lux-gold)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                    Establishment of Diminution in Value
+                  <h4 style={{ margin: 0 }}>Title Claims &amp; Defects</h4>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--bento-gold)', fontWeight: 800, textTransform: 'uppercase' }}>
+                    Title Policy &amp; Boundary Analysis
                   </span>
                 </div>
               </div>
-              <p style={{ color: 'var(--lux-text-body)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-                Evaluate reduction in market value due to title defects, liens, encumbrances, or external factors like nuisances, subsidence, or access impairments.
+              <p className="bento-desc" style={{ marginBottom: '1rem' }}>
+                <strong>Title Policy Coverage:</strong> Determine covered loss or damage up to the policy amount under Michigan title insurances.
+              </p>
+              <p className="bento-desc" style={{ margin: 0 }}>
+                <strong>Actual Loss Valuations:</strong> Calculate difference in value with defect vs. without defect using historical market proof.
               </p>
             </div>
 
             {/* Insurance Damage */}
-            <div className="lux-feature-card" style={{ borderLeft: '6px solid var(--lux-crimson)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.5rem' }}>
-                <div style={{ position: 'relative', width: '56px', height: '56px', flexShrink: 0 }}>
+            <div className="bento-feature-box" style={{ borderLeft: '5px solid var(--bento-crimson)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.25rem' }}>
+                <div style={{ position: 'relative', width: '52px', height: '52px', flexShrink: 0 }}>
                   <Image src="/images/insurance-damage.png" alt="Insurance Damage" fill style={{ objectFit: 'contain' }} />
                 </div>
                 <div>
-                  <h4 style={{ margin: 0, fontSize: '1.6rem' }}>Insurance Damage</h4>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--lux-crimson)', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                  <h4 style={{ margin: 0 }}>Insurance Damage</h4>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--bento-crimson)', fontWeight: 800, textTransform: 'uppercase' }}>
                     Total Loss &amp; Diminished Value
                   </span>
                 </div>
               </div>
-              <p style={{ color: 'var(--lux-text-body)', marginBottom: '1rem', lineHeight: 1.8, fontSize: '1.05rem' }}>
+              <p className="bento-desc" style={{ marginBottom: '1rem' }}>
                 <strong>Total Loss Valuations:</strong> Determine the value of property that is beyond repair using market data, build sheets, and comparable sales.
               </p>
-              <p style={{ color: 'var(--lux-text-body)', lineHeight: 1.8, fontSize: '1.05rem' }}>
+              <p className="bento-desc" style={{ margin: 0 }}>
                 <strong>Diminished Value Appraisals:</strong> Assess loss in market value due to damage, helping you recover owed compensation from insurers.
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Experience in All Property Types & Testimonials */}
-        <section style={{ 
-          background: '#ffffff', 
-          border: '1px solid var(--lux-gold-border)', 
-          borderRadius: 'var(--radius-lg)', 
-          padding: '4rem',
-          boxShadow: 'var(--shadow-lux-card)',
-          margin: '5rem 0'
-        }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'start' }}>
+        <div className="bento-card" style={{ background: '#ffffff', marginBottom: '4rem', padding: '3.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '3.5rem', alignItems: 'start' }}>
             <div>
-              <span className="lux-eyebrow">Asset Versatility</span>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2.5rem', fontWeight: 600, color: 'var(--lux-dark)', margin: '0.5rem 0 1.25rem' }}>
-                Experience in All Property Types
-              </h3>
-              <p style={{ color: 'var(--lux-text-body)', marginBottom: '1.75rem', lineHeight: 1.8, fontSize: '1.1rem' }}>
+              <span className="bento-badge-tag">Asset Versatility</span>
+              <h2 className="bento-title-large">Experience in All Property Types</h2>
+              <p className="bento-desc">
                 Our team of senior appraisers has proven historical experience analyzing every class of commercial and residential property:
               </p>
               
-              <div className="lux-badge-cloud">
+              <div className="bento-tags-cloud">
                 {propertyTypes.map((type, i) => (
-                  <span key={i} className="lux-tag">{type}</span>
+                  <span key={i} className="bento-tag-item">{type}</span>
                 ))}
               </div>
-              <p style={{ fontSize: '0.9rem', color: 'var(--lux-text-muted)', fontStyle: 'italic', marginTop: '1.5rem' }}>
+              <p style={{ fontSize: '0.85rem', color: 'var(--bento-text-muted)', fontStyle: 'italic', marginTop: '1rem' }}>
                 * List not inclusive, contact our value experts about your specific property portfolio.
               </p>
             </div>
 
             <div>
-              <span className="lux-eyebrow">Client Validation</span>
-              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '2rem', fontWeight: 600, color: 'var(--lux-dark)', margin: '0.5rem 0 1.5rem' }}>
-                Client Testimonials
-              </h3>
+              <span className="bento-badge-tag">Client Validation</span>
+              <h2 className="bento-title-large">Client Testimonials</h2>
               {testimonials.map((t, idx) => (
-                <div key={idx} className="lux-quote-card">
+                <div key={idx} className="bento-quote-item">
                   <p>“{t.quote}”</p>
                   <span>— {t.author}</span>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Areas We Serve with Visuals */}
-        <section id="coverage" style={{ margin: '5rem 0' }}>
-          <div className="lux-section-header">
-            <span className="lux-eyebrow">Territorial Coverage</span>
-            <h2 className="lux-section-title">Areas We Serve</h2>
-            <p className="lux-section-subtitle">Providing statewide appraisal services across Michigan with focused residential expertise.</p>
+        <div id="coverage" style={{ marginBottom: '4rem' }}>
+          <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 2.5rem' }}>
+            <span className="bento-badge-tag">Territorial Coverage</span>
+            <h2 className="bento-title-large">Areas We Serve</h2>
+            <p className="bento-desc">Providing statewide appraisal services across Michigan with focused residential expertise.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(330px, 1fr))', gap: '3rem' }}>
-            <div className="lux-feature-card" style={{ padding: '2.5rem' }}>
-              <div style={{ position: 'relative', width: '100%', height: '260px', marginBottom: '1.75rem', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+            <div className="bento-card">
+              <div style={{ position: 'relative', width: '100%', height: '260px', marginBottom: '1.5rem', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
                 <Image 
                   src="/images/michigan-map.jpg" 
                   alt="Michigan Non-Residential Service Area Map" 
@@ -232,14 +245,14 @@ export default function ValuationPage() {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <h4 style={{ fontSize: '1.8rem', color: 'var(--lux-dark)', marginBottom: '0.75rem' }}>Non-Residential Appraisal Services</h4>
-              <p style={{ color: 'var(--lux-text-body)', lineHeight: 1.8, fontSize: '1.05rem' }}>
+              <h3 style={{ fontSize: '1.6rem', color: 'var(--bento-crimson)', marginBottom: '0.5rem', fontWeight: 800 }}>Non-Residential Appraisal Services</h3>
+              <p className="bento-desc" style={{ margin: 0 }}>
                 Our coverage area is the <strong>entire State of Michigan</strong> including the Upper Peninsula. We are on the road most of our time traveling the highways and byways of the State.
               </p>
             </div>
 
-            <div className="lux-feature-card" style={{ padding: '2.5rem' }}>
-              <div style={{ position: 'relative', width: '100%', height: '260px', marginBottom: '1.75rem', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
+            <div className="bento-card">
+              <div style={{ position: 'relative', width: '100%', height: '260px', marginBottom: '1.5rem', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
                 <Image 
                   src="/images/office-building.jpg" 
                   alt="Residential & Commercial Service Area" 
@@ -247,18 +260,19 @@ export default function ValuationPage() {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <h4 style={{ fontSize: '1.8rem', color: 'var(--lux-dark)', marginBottom: '0.75rem' }}>Residential Appraisal Services</h4>
-              <p style={{ color: 'var(--lux-text-body)', lineHeight: 1.8, fontSize: '1.05rem' }}>
+              <h3 style={{ fontSize: '1.6rem', color: 'var(--bento-crimson)', marginBottom: '0.5rem', fontWeight: 800 }}>Residential Appraisal Services</h3>
+              <p className="bento-desc" style={{ margin: 0 }}>
                 Our coverage area includes <strong>Wayne, Oakland, Macomb, and Washtenaw</strong> counties.
               </p>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Form */}
-        <div style={{ marginTop: '6rem' }}>
+        {/* Contact Form Section */}
+        <div className="bento-contact-card" style={{ maxWidth: '840px', margin: '0 auto' }}>
           <ContactForm subtitle="Connect with our valuation experts for appraisal assignments, probate, and expert witness testimony" />
         </div>
+
       </div>
     </div>
   );

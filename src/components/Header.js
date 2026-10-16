@@ -18,26 +18,26 @@ export default function Header() {
 
   return (
     <>
-      {/* Luxury Top Status Bar */}
-      <div className="lux-topbar">
-        <div className="container lux-topbar-inner">
+      {/* Desktop Top Contact Bar (Strictly Hidden on Mobile) */}
+      <div className="bento-topbar">
+        <div className="container bento-topbar-inner">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <span>📍 22952 OUTER DRIVE, DEARBORN, MI 48124</span>
-            <span style={{ opacity: 0.3 }}>|</span>
-            <span style={{ color: 'var(--lux-gold-bright)', fontWeight: 700 }}>30+ YEARS OF CLIENT EXCELLENCE</span>
+            <span style={{ opacity: 0.35 }}>|</span>
+            <span style={{ color: 'var(--bento-gold)', fontWeight: 700 }}>30+ YEARS OF CLIENT EXCELLENCE</span>
           </div>
-          <div className="lux-topbar-links">
+          <div className="bento-topbar-links">
             <a href="tel:3132771986">TEL: (313) 277-1986</a>
             <a href="mailto:JumanaJ@JudehOnLine.com">EMAIL: JumanaJ@JudehOnLine.com</a>
           </div>
         </div>
       </div>
 
-      {/* Luxury Navbar */}
-      <header className="lux-navbar">
-        <div className="container lux-nav-inner">
-          <Link href="/" className="lux-brand-wrapper">
-            <div style={{ position: 'relative', width: '180px', height: '64px' }}>
+      {/* Modern Bento Sticky Header */}
+      <header className="bento-header">
+        <div className="container bento-header-inner">
+          <Link href="/" className="bento-brand-wrap" style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ position: 'relative', width: '185px', height: '62px' }}>
               <Image 
                 src="/images/the-judeh-group-logo.png" 
                 alt="The Judeh Group" 
@@ -49,7 +49,7 @@ export default function Header() {
           </Link>
 
           <button 
-            className="lux-mobile-btn"
+            className="bento-mobile-toggle"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle navigation menu"
           >
@@ -57,13 +57,14 @@ export default function Header() {
           </button>
 
           <nav>
-            <ul className={`lux-nav-menu ${menuOpen ? 'open' : ''}`}>
+            <ul className={`bento-nav-list ${menuOpen ? 'open' : ''}`}>
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
-                  <li key={link.href} className={`lux-nav-item ${isActive ? 'active' : ''}`}>
+                  <li key={link.href}>
                     <Link 
                       href={link.href}
+                      className={`bento-nav-link ${isActive ? 'active' : ''}`}
                       onClick={() => setMenuOpen(false)}
                     >
                       {link.label}
@@ -72,8 +73,12 @@ export default function Header() {
                 );
               })}
               <li>
-                <Link href="/#contact-section" className="lux-btn-primary" onClick={() => setMenuOpen(false)}>
-                  Inquire Directly &rarr;
+                <Link 
+                  href="/#contact-section" 
+                  className="bento-cta-btn" 
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Contact Us &rarr;
                 </Link>
               </li>
             </ul>
@@ -83,3 +88,4 @@ export default function Header() {
     </>
   );
 }
+
