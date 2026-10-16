@@ -1,0 +1,956 @@
+/* ==========================================================================
+   JUDEH & ASSOCIATES — ULTRA-LUXURY HIGH-END REDESIGN
+   Palette:
+   - Deep Royal Burgundy / Crimson: #680010 & #810014
+   - Brushed Metallic Gold: #c99326 & #e09900
+   - Deep Obsidian Navy: #070e17 & #0d1927
+   - Pristine Pearl / Warm Marble: #fcfbf9
+   - Warm Subtle Borders: rgba(201, 147, 38, 0.2)
+   ========================================================================== */
+
+:root {
+  --lux-crimson: #730012;
+  --lux-crimson-dark: #4e000c;
+  --lux-crimson-light: #8f0017;
+
+  --lux-gold: #c99326;
+  --lux-gold-bright: #e5aa38;
+  --lux-gold-light: #fbf5e8;
+  --lux-gold-gradient: linear-gradient(135deg, #d8a032 0%, #b8821d 100%);
+  --lux-gold-border: rgba(201, 147, 38, 0.35);
+
+  --lux-dark: #070e17;
+  --lux-dark-surface: #0e1b2b;
+  --lux-dark-card: #132438;
+
+  --lux-bg: #fcfbf9;
+  --lux-white: #ffffff;
+
+  --lux-text-dark: #0b1320;
+  --lux-text-body: #334155;
+  --lux-text-muted: #64748b;
+  --lux-text-gold: #c99326;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+
+  --shadow-lux-sm: 0 4px 15px rgba(7, 14, 23, 0.04);
+  --shadow-lux-card: 0 16px 40px -10px rgba(7, 14, 23, 0.08), 0 4px 12px rgba(7, 14, 23, 0.03);
+  --shadow-lux-elevated: 0 25px 60px -12px rgba(7, 14, 23, 0.16);
+  --shadow-gold-glow: 0 8px 30px rgba(201, 147, 38, 0.25);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--lux-bg);
+  color: var(--lux-text-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ==========================================================================
+   LUXURY TOP BAR
+   ========================================================================== */
+.lux-topbar {
+  background-color: var(--lux-dark);
+  color: #94a3b8;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lux-topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.lux-topbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.lux-topbar-links a {
+  color: var(--lux-gold-bright);
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.lux-topbar-links a:hover {
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   LUXURY FLOATING NAVBAR
+   ========================================================================== */
+.lux-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(252, 251, 249, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201, 147, 38, 0.18);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.lux-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+}
+
+.lux-brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lux-brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--lux-crimson);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.lux-brand-sub {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--lux-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 2px;
+}
+
+.lux-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.lux-nav-item a {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--lux-dark);
+  letter-spacing: 0.02em;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: var(--transition);
+}
+
+.lux-nav-item a:hover,
+.lux-nav-item.active a {
+  color: var(--lux-crimson);
+}
+
+.lux-nav-item.active a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--lux-gold-gradient);
+}
+
+.lux-btn-primary {
+  background: var(--lux-gold-gradient);
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.75rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-gold-glow);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lux-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(201, 147, 38, 0.4);
+}
+
+.lux-mobile-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--lux-gold);
+  color: var(--lux-crimson);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.85rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   LUXURY HERO: HIGH-FASHION EDITORIAL + PROPERTY BACKDROP
+   ========================================================================== */
+.lux-hero-section {
+  position: relative;
+  min-height: 640px;
+  background-color: var(--lux-dark);
+  color: #ffffff;
+  padding: 7rem 0 6rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.lux-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.45;
+  filter: contrast(1.15) brightness(0.9);
+}
+
+.lux-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(201, 147, 38, 0.15) 0%, transparent 65%),
+              linear-gradient(180deg, rgba(7, 14, 23, 0.68) 0%, rgba(7, 14, 23, 0.92) 100%);
+}
+
+.lux-hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 4.5rem;
+}
+
+.lux-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(201, 147, 38, 0.12);
+  border: 1px solid var(--lux-gold-border);
+  color: var(--lux-gold-bright);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.45rem 1.25rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+}
+
+.lux-hero-headline {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.lux-hero-headline em {
+  font-style: italic;
+  color: var(--lux-gold-bright);
+}
+
+.lux-hero-desc {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  line-height: 1.8;
+  max-width: 620px;
+  margin-bottom: 2.75rem;
+}
+
+.lux-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.lux-btn-crimson {
+  background: linear-gradient(135deg, var(--lux-crimson) 0%, var(--lux-crimson-dark) 100%);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 1rem 2.25rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 25px rgba(115, 0, 18, 0.4);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lux-btn-crimson:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(115, 0, 18, 0.55);
+}
+
+.lux-btn-outline {
+  border: 1.5px solid var(--lux-gold-border);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+
+.lux-btn-outline:hover {
+  border-color: var(--lux-gold-bright);
+  color: var(--lux-gold-bright);
+  background: rgba(201, 147, 38, 0.08);
+}
+
+/* Hero Stats Glassmorphism Card */
+.lux-stats-card {
+  background: rgba(19, 36, 56, 0.65);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 147, 38, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow-lux-elevated);
+}
+
+.lux-stat-entry {
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lux-stat-entry:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.lux-stat-number {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: var(--lux-gold-bright);
+  line-height: 1;
+}
+
+.lux-stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.4rem;
+}
+
+/* ==========================================================================
+   LUXURY 3-PILLAR CARDS (High-End Gallery Aesthetic)
+   ========================================================================= */
+.lux-pillars-section {
+  padding: 6.5rem 0;
+  background-color: var(--lux-bg);
+}
+
+.lux-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 4.5rem;
+}
+
+.lux-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--lux-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.lux-section-title {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 600;
+  color: var(--lux-dark);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.lux-section-subtitle {
+  font-size: 1.15rem;
+  color: var(--lux-text-muted);
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
+.lux-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.lux-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(201, 147, 38, 0.2);
+  padding: 3.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+  box-shadow: var(--shadow-lux-card);
+}
+
+.lux-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--lux-gold-gradient);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.lux-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lux-elevated);
+  border-color: rgba(201, 147, 38, 0.45);
+}
+
+.lux-card:hover::before {
+  opacity: 1;
+}
+
+.lux-card-icon-wrap {
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-md);
+  background: var(--lux-gold-light);
+  border: 1px solid var(--lux-gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: var(--transition);
+}
+
+.lux-card:hover .lux-card-icon-wrap {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.lux-card-meta {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--lux-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.5rem;
+}
+
+.lux-card-title {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--lux-crimson);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.lux-card-text {
+  font-size: 1.05rem;
+  color: var(--lux-text-body);
+  line-height: 1.75;
+  margin-bottom: 2.25rem;
+  flex-grow: 1;
+}
+
+.lux-card-action {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--lux-crimson);
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: var(--transition);
+}
+
+.lux-card-action:hover {
+  color: var(--lux-gold);
+  gap: 0.9rem;
+}
+
+/* ==========================================================================
+   EXCLUSIVE "SERVICE YOU CAN TRUST" STATEMENT SECTION
+   ========================================================================== */
+.lux-statement-banner {
+  background: linear-gradient(135deg, var(--lux-dark) 0%, #0d1927 100%);
+  border: 1px solid var(--lux-gold-border);
+  border-radius: var(--radius-lg);
+  padding: 4.5rem 4rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 5rem 0;
+  box-shadow: var(--shadow-lux-elevated);
+  position: relative;
+  overflow: hidden;
+}
+
+.lux-statement-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background: radial-gradient(circle at 80% 50%, rgba(201, 147, 38, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.lux-statement-content h2 {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.lux-statement-content p {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   LUXURY INNER SUBPAGES (VALUATION, REALTORS, MOTIVATIONAL)
+   ========================================================================== */
+.lux-subpage-hero {
+  background: linear-gradient(180deg, #ffffff 0%, var(--lux-bg) 100%);
+  padding: 5.5rem 0 4.5rem;
+  border-bottom: 1px solid var(--lux-gold-border);
+}
+
+.lux-subpage-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.lux-subpage-title {
+  font-family: var(--font-serif);
+  font-size: 3.75rem;
+  font-weight: 600;
+  color: var(--lux-dark);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.lux-subpage-desc {
+  font-size: 1.25rem;
+  color: var(--lux-text-body);
+  line-height: 1.8;
+  max-width: 740px;
+  margin-bottom: 2rem;
+}
+
+.lux-contact-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.lux-meta-pill {
+  background: #ffffff;
+  border: 1px solid var(--lux-gold-border);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--lux-dark);
+  box-shadow: var(--shadow-lux-sm);
+}
+
+.lux-meta-pill a {
+  color: var(--lux-crimson);
+  font-weight: 700;
+}
+
+.lux-logo-emblem {
+  background: #ffffff;
+  border: 1px solid var(--lux-gold-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-lux-card);
+  flex-shrink: 0;
+}
+
+/* Subpage Detail Cards */
+.lux-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2.25rem;
+  margin: 3.5rem 0;
+}
+
+.lux-feature-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(201, 147, 38, 0.22);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lux-card);
+  transition: var(--transition);
+}
+
+.lux-feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--lux-gold);
+  box-shadow: var(--shadow-lux-elevated);
+}
+
+.lux-feature-card h4 {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: var(--lux-crimson);
+  margin-bottom: 1rem;
+}
+
+.lux-feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.lux-feature-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.85rem;
+  color: var(--lux-text-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.lux-feature-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--lux-gold);
+  font-size: 0.85rem;
+}
+
+/* Property Badges Cloud */
+.lux-badge-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.75rem 0;
+}
+
+.lux-tag {
+  background-color: var(--lux-gold-light);
+  border: 1px solid var(--lux-gold-border);
+  color: var(--lux-dark);
+  font-size: 0.925rem;
+  font-weight: 700;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+
+.lux-tag:hover {
+  background-color: var(--lux-gold);
+  color: #ffffff;
+}
+
+/* Luxury Quote Card */
+.lux-quote-card {
+  background: #ffffff;
+  border-left: 5px solid var(--lux-gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-lux-card);
+}
+
+.lux-quote-card p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--lux-dark);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.lux-quote-card span {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--lux-crimson);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ==========================================================================
+   CONTACT SECTION & FORM
+   ========================================================================== */
+.lux-contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 5rem 0;
+}
+
+.lux-contact-info-panel {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--lux-gold-border);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-lux-card);
+}
+
+.lux-contact-form-panel {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--lux-gold-border);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-lux-card);
+}
+
+.lux-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.lux-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--lux-dark);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lux-input {
+  width: 100%;
+  padding: 0.95rem 1.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--lux-dark);
+  background: #fafaf9;
+  transition: var(--transition);
+}
+
+.lux-input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: var(--lux-gold);
+  box-shadow: 0 0 0 4px rgba(201, 147, 38, 0.15);
+}
+
+/* ==========================================================================
+   LUXURY FOOTER
+   ========================================================================== */
+.lux-footer {
+  background-color: var(--lux-dark);
+  color: #94a3b8;
+  padding: 6rem 0 2.5rem;
+  margin-top: 7rem;
+  border-top: 1px solid var(--lux-gold-border);
+}
+
+.lux-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 5rem;
+  padding-bottom: 4.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lux-footer-col h4 {
+  font-family: var(--font-serif);
+  color: var(--lux-gold-bright);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.lux-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lux-footer-links a {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.lux-footer-links a:hover {
+  color: var(--lux-gold-bright);
+  padding-left: 6px;
+}
+
+.lux-footer-bottom {
+  padding-top: 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .lux-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .lux-hero-headline {
+    font-size: 3.5rem;
+  }
+
+  .lux-pillars-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lux-statement-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+
+  .lux-subpage-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lux-contact-split {
+    grid-template-columns: 1fr;
+  }
+
+  .lux-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .lux-topbar-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .lux-nav-menu {
+    display: none;
+    position: absolute;
+    top: 96px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.25rem;
+    border-bottom: 2px solid var(--lux-gold);
+    box-shadow: var(--shadow-lux-elevated);
+  }
+
+  .lux-nav-menu.open {
+    display: flex;
+  }
+
+  .lux-mobile-btn {
+    display: block;
+  }
+
+  .lux-btn-primary {
+    display: none;
+  }
+
+  .lux-hero-headline {
+    font-size: 2.75rem;
+  }
+
+  .lux-subpage-title {
+    font-size: 2.5rem;
+  }
+
+  .lux-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lux-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
