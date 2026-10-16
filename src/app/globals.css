@@ -515,6 +515,248 @@ img {
 }
 
 /* ==========================================================================
+   HOME VALUATION SHOWCASE WITH BIG IMAGES
+   ========================================================================== */
+.home-valuation-showcase-section {
+  padding: 1rem 0 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.valuation-showcase-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.valuation-showcase-title-wrap {
+  max-width: 720px;
+}
+
+.valuation-showcase-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--bento-obsidian);
+  line-height: 1.2;
+  margin: 0.35rem 0 0.85rem;
+}
+
+.valuation-showcase-sub {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.valuation-showcase-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Big Images Layout Grid */
+.valuation-big-images-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.valuation-big-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--bento-border-light);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(9, 14, 23, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  grid-column: span 5;
+}
+
+.valuation-big-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(9, 14, 23, 0.14);
+}
+
+.valuation-big-card.valuation-big-featured {
+  grid-column: span 7;
+  grid-row: span 2;
+}
+
+.valuation-big-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.valuation-big-featured .valuation-big-img-wrap {
+  height: 480px;
+}
+
+.valuation-big-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 14, 23, 0.1) 0%, rgba(9, 14, 23, 0.75) 100%);
+}
+
+.valuation-big-card-badge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: rgba(9, 14, 23, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--bento-gold);
+  border: 1px solid rgba(224, 153, 0, 0.4);
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.valuation-big-card-body {
+  padding: 2.25rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.valuation-big-card-body h3 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--bento-obsidian);
+  margin: 0.25rem 0 0.85rem;
+  line-height: 1.3;
+}
+
+.valuation-big-card-body p {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.valuation-big-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+  flex-wrap: wrap;
+}
+
+.valuation-pill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.valuation-pill-tags span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: #f1f5f9;
+  color: var(--bento-obsidian);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e2e8f0;
+}
+
+.valuation-inline-link {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--bento-crimson);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition);
+}
+
+.valuation-inline-link:hover {
+  color: var(--bento-gold);
+  transform: translateX(4px);
+}
+
+/* Coverage Banner with Dual Maps */
+.valuation-coverage-banner {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--bento-border-light);
+  box-shadow: 0 16px 36px rgba(9, 14, 23, 0.08);
+  padding: 2.5rem;
+  margin-top: 1rem;
+}
+
+.valuation-coverage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25rem;
+}
+
+.valuation-map-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.valuation-map-img {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1.25rem;
+}
+
+.valuation-map-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--bento-crimson);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.valuation-map-meta h4 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--bento-obsidian);
+  margin-bottom: 0.4rem;
+}
+
+.valuation-map-meta p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive adjustments for big valuation section */
+@media (max-width: 980px) {
+  .valuation-big-card,
+  .valuation-big-card.valuation-big-featured {
+    grid-column: span 12;
+  }
+
+  .valuation-coverage-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    ARCHITECTURAL BENTO GRID (The New Structure)
    ========================================================================== */
 .bento-grid-section {

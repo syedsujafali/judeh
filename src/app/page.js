@@ -162,7 +162,183 @@ export default function HomePage() {
       </section>
 
       {/* ==========================================================================
-          MODERN ARCHITECTURAL BENTO GRID
+          VALUATION PRACTICE SHOWCASE WITH BIG IMAGERY (Directly After About Us)
+          ========================================================================== */}
+      <section className="home-valuation-showcase-section" id="valuation-practice">
+        <div className="container">
+          
+          <div className="valuation-showcase-header">
+            <div className="valuation-showcase-title-wrap">
+              <span className="bento-badge-tag">Flagship Valuation Practice</span>
+              <h2 className="valuation-showcase-heading">
+                Real Estate Valuation &amp; Expert Advisory
+              </h2>
+              <p className="valuation-showcase-sub">
+                We understand what creates property value, how such value is influenced, and how the characteristics of a property are affected by dynamic market conditions across Michigan.
+              </p>
+            </div>
+
+            <div className="valuation-showcase-actions">
+              <Link href="/valuation" className="btn-bento-primary">
+                Explore Full Valuation Page &rarr;
+              </Link>
+              <Link href="/appraisal" className="btn-bento-gold">
+                View Appraisal Services
+              </Link>
+            </div>
+          </div>
+
+          {/* Big Featured Images Gallery Grid */}
+          <div className="valuation-big-images-grid">
+            
+            {/* Big Feature 1: Commercial & Special Purpose Properties (Large Left 7 cols) */}
+            <div className="valuation-big-card valuation-big-featured">
+              <div className="valuation-big-img-wrap">
+                <Image 
+                  src="/images/fb-cover-building.jpg" 
+                  alt="Michigan Commercial and Mixed-Use Valuation" 
+                  fill 
+                  priority
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className="valuation-big-gradient-overlay" />
+                <div className="valuation-big-card-badge">
+                  <span>Major Public &amp; Private Portfolios</span>
+                </div>
+              </div>
+
+              <div className="valuation-big-card-body">
+                <span className="bento-badge-tag">Commercial &amp; Industrial</span>
+                <h3>Commercial Real Estate Valuation</h3>
+                <p>
+                  Comprehensive valuation reports for multi-tenant office complexes, industrial manufacturing facilities, retail centers, medical suites, and eminent domain parcels throughout the State of Michigan.
+                </p>
+                <div className="valuation-big-card-footer">
+                  <div className="valuation-pill-tags">
+                    <span>ARGUS DCF Modeling</span>
+                    <span>Cap Rate Extraction</span>
+                    <span>USPAP &amp; FIRREA Compliant</span>
+                  </div>
+                  <Link href="/valuation" className="valuation-inline-link">
+                    Valuation Services &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Big Feature 2: Market Analytics & CoStar Research (Top Right 5 cols) */}
+            <div className="valuation-big-card">
+              <div className="valuation-big-img-wrap" style={{ height: '240px' }}>
+                <Image 
+                  src="/images/fb-market-chart.jpg" 
+                  alt="Commercial Real Estate Transaction Volume and Market Trends" 
+                  fill 
+                  style={{ objectFit: 'contain', background: '#f8fafc', padding: '12px' }}
+                />
+                <div className="valuation-big-card-badge" style={{ background: 'var(--bento-crimson)' }}>
+                  <span>Verified Market Data</span>
+                </div>
+              </div>
+
+              <div className="valuation-big-card-body">
+                <span className="bento-badge-tag">Market Intelligence</span>
+                <h3>Transaction Volume &amp; Trend Studies</h3>
+                <p>
+                  Accurate appraisals require continuous empirical tracking of commercial transaction volumes, capitalization shifts, and rent absorption.
+                </p>
+                <div className="valuation-big-card-footer">
+                  <span style={{ fontSize: '0.85rem', color: 'var(--bento-crimson)', fontWeight: 700 }}>
+                    18+ Years Historical Data
+                  </span>
+                  <Link href="/newsletter" className="valuation-inline-link">
+                    Market News &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Big Feature 3: Forensic & Damage Appraisals (Bottom Right 5 cols) */}
+            <div className="valuation-big-card">
+              <div className="valuation-big-img-wrap" style={{ height: '240px' }}>
+                <Image 
+                  src="/images/fb-property-taxes.jpg" 
+                  alt="Property Tax Appeals and Assessments" 
+                  fill 
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className="valuation-big-gradient-overlay" />
+                <div className="valuation-big-card-badge" style={{ background: 'var(--bento-gold)', color: '#090e17' }}>
+                  <span>Forensic Analysis</span>
+                </div>
+              </div>
+
+              <div className="valuation-big-card-body">
+                <span className="bento-badge-tag">Litigation &amp; Claims</span>
+                <h3>Tax Appeals, Title Claims &amp; Casualty Loss</h3>
+                <p>
+                  Specialized litigation support, diminished market value determinations, boundary defect analysis, and Michigan Tax Tribunal defense.
+                </p>
+                <div className="valuation-big-card-footer">
+                  <span style={{ fontSize: '0.85rem', color: 'var(--bento-gold)', fontWeight: 800 }}>
+                    Court-Tested Expert Witness
+                  </span>
+                  <Link href="/consulting" className="valuation-inline-link">
+                    Consulting &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Statewide Territorial Visual Bar with Dual Big Maps */}
+          <div className="valuation-coverage-banner">
+            <div className="valuation-coverage-grid">
+              
+              <div className="valuation-map-card">
+                <div className="valuation-map-img">
+                  <Image 
+                    src="/images/michigan-map.jpg" 
+                    alt="Statewide Non-Residential Appraisal Coverage" 
+                    fill 
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <div className="valuation-map-badge">
+                    <span>Entire State of Michigan</span>
+                  </div>
+                </div>
+                <div className="valuation-map-meta">
+                  <h4>Non-Residential Appraisal Services</h4>
+                  <p>Covering the entire State of Michigan including the Upper Peninsula for commercial, industrial, and infrastructure assignments.</p>
+                </div>
+              </div>
+
+              <div className="valuation-map-card">
+                <div className="valuation-map-img">
+                  <Image 
+                    src="/images/four-counties-map.jpg" 
+                    alt="Four Counties Residential Appraisal Coverage" 
+                    fill 
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <div className="valuation-map-badge" style={{ background: 'var(--bento-gold)', color: '#090e17' }}>
+                    <span>Wayne &bull; Oakland &bull; Macomb &bull; Washtenaw</span>
+                  </div>
+                </div>
+                <div className="valuation-map-meta">
+                  <h4>Residential Appraisal Services</h4>
+                  <p>Dedicated high-touch residential appraisal services across the premier 4-county Southeast Michigan metropolitan corridor.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ==========================================================================
+          MODERN ARCHITECTURAL BENTO GRID (Remaining Practice Areas)
           ========================================================================== */}
       <section className="bento-grid-section" id="architecture">
         <div className="container">
