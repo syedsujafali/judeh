@@ -104,19 +104,78 @@ export default function ValuationPage() {
 
       <div className="container" style={{ padding: '3.5rem 2rem 5rem' }}>
         
-        {/* Core Value Proposition Bento Card */}
+        {/* Core Value Proposition Bento Card with Leader Badge */}
         <div className="bento-card" style={{ marginBottom: '3.5rem', background: '#ffffff' }}>
-          <span className="bento-badge-tag">Analytical Excellence</span>
-          <h2 className="bento-title-large">Understanding Property Value in Every Market Cycle</h2>
-          <p className="bento-desc" style={{ fontSize: '1.1rem', maxWidth: '900px' }}>
-            We work with you to analyze, summarize, and communicate our conclusions in an effective and understandable manner. 
-            Because each assignment is unique, so are our analytical approaches. Our staff has extensive experience and has 
-            completed thousands of appraisals across the full spectrum of Michigan real property.
-          </p>
-          <div style={{ marginTop: '0.5rem' }}>
-            <Link href="#contact-form" className="btn-bento-primary">
-              Request a Valuation Quote &rarr;
-            </Link>
+          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '3rem', alignItems: 'center' }}>
+            <div>
+              <span className="bento-badge-tag">Analytical Excellence</span>
+              <h2 className="bento-title-large">Understanding Property Value in Every Market Cycle</h2>
+              <p className="bento-desc" style={{ fontSize: '1.05rem' }}>
+                We work with you to analyze, summarize, and communicate our conclusions in an effective and understandable manner. 
+                Because each assignment is unique, so are our analytical approaches. Our staff has extensive experience and has 
+                completed thousands of appraisals across the full spectrum of Michigan real property.
+              </p>
+              <div style={{ marginTop: '1.5rem' }}>
+                <Link href="#contact-form" className="btn-bento-primary">
+                  Request a Valuation Quote &rarr;
+                </Link>
+              </div>
+            </div>
+
+            {/* Official Facebook Certification Banner */}
+            <div style={{ position: 'relative', height: '180px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }}>
+              <Image 
+                src="/images/fb-valuation-expert-banner.jpg" 
+                alt="Jumana Judeh, MAI, CCIM, MCAO Certified General Appraiser" 
+                fill 
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Real Estate Market Intelligence Section (From Facebook CoStar Analysis) */}
+        <div style={{ marginBottom: '4rem' }}>
+          <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 2.5rem' }}>
+            <span className="bento-badge-tag">Market Analytics</span>
+            <h2 className="bento-title-large">Following Market Trends &amp; Transaction Volumes</h2>
+            <p className="bento-desc">
+              Accurate valuation requires rigorous tracking of commercial transaction volume across retail, multi-family, office, and industrial submarkets.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+            {/* Chart Card */}
+            <div className="bento-card" style={{ padding: '2rem' }}>
+              <div style={{ position: 'relative', height: '300px', borderRadius: 'var(--radius-md)', overflow: 'hidden', marginBottom: '1.25rem', border: '1px solid #e2e8f0' }}>
+                <Image 
+                  src="/images/fb-market-chart.jpg" 
+                  alt="Commercial Real Estate Transaction Volume" 
+                  fill 
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+              <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--bento-crimson)', marginBottom: '0.5rem' }}>Transaction Volume Studies</h3>
+              <p className="bento-desc" style={{ margin: 0, fontSize: '0.95rem' }}>
+                Tracking historical and active annual transaction volume across 5 core property classes to provide accurate, market-proven valuations.
+              </p>
+            </div>
+
+            {/* Property Tax Appeals Card */}
+            <div className="bento-card" style={{ padding: '2rem' }}>
+              <div style={{ position: 'relative', height: '300px', borderRadius: 'var(--radius-md)', overflow: 'hidden', marginBottom: '1.25rem', border: '1px solid #e2e8f0' }}>
+                <Image 
+                  src="/images/fb-tax-assessment.jpg" 
+                  alt="Detroit Property Tax Appeals" 
+                  fill 
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+              <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--bento-crimson)', marginBottom: '0.5rem' }}>Property Tax Appeals &amp; Assessments</h3>
+              <p className="bento-desc" style={{ margin: 0, fontSize: '0.95rem' }}>
+                Guiding commercial and residential owners through municipal tax appeal windows and Board of Review hearings with defensible evidence.
+              </p>
+            </div>
           </div>
         </div>
 

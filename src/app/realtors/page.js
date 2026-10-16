@@ -26,6 +26,27 @@ export default function RealtorsPage() {
     },
   ];
 
+  const featuredProperties = [
+    {
+      title: 'Commercial Multi-Family & Mixed-Use',
+      image: '/images/fb-cover-building.jpg',
+      tag: 'Apartments & Multi-Family',
+      desc: 'Hands-on brokerage and asset consulting for multi-tenant residential and urban mixed-use assets across Dearborn and Detroit.',
+    },
+    {
+      title: 'Corporate Office & Medical Centers',
+      image: '/images/office-building.jpg',
+      tag: 'Office & Medical',
+      desc: 'Strategic leasing, acquisition, and disposition of prime corporate offices and suburban medical centers.',
+    },
+    {
+      title: 'Retail & Industrial Portfolios',
+      image: '/images/office-building-square.jpg',
+      tag: 'Industrial & Retail',
+      desc: 'Comprehensive market absorption studies and valuation analysis for industrial warehousing and shopping centers.',
+    },
+  ];
+
   return (
     <div>
       {/* Modern Subpage Hero */}
@@ -106,6 +127,41 @@ export default function RealtorsPage() {
                 </h3>
                 <p className="bento-desc" style={{ margin: 0 }}>
                   {svc.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Featured Commercial & Residential Property Showcase */}
+        <div style={{ marginBottom: '5rem' }}>
+          <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 3rem' }}>
+            <span className="bento-badge-tag">Asset Portfolio</span>
+            <h2 className="bento-title-large">Transaction &amp; Property Types</h2>
+            <p className="bento-desc">
+              Proven advisory across commercial, multi-family, office complexes, and industrial assets in Southeast Michigan.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+            {featuredProperties.map((prop, idx) => (
+              <div key={idx} className="bento-card" style={{ padding: '1.5rem', overflow: 'hidden' }}>
+                <div style={{ position: 'relative', width: '100%', height: '220px', borderRadius: 'var(--radius-md)', overflow: 'hidden', marginBottom: '1.25rem', border: '1px solid #e2e8f0' }}>
+                  <Image 
+                    src={prop.image} 
+                    alt={prop.title} 
+                    fill 
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <div style={{ position: 'absolute', top: '12px', left: '12px', background: 'var(--bento-crimson)', color: '#ffffff', fontSize: '0.75rem', fontWeight: 800, padding: '4px 10px', borderRadius: 'var(--radius-full)' }}>
+                    {prop.tag}
+                  </div>
+                </div>
+                <h3 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--bento-text-main)', marginBottom: '0.5rem' }}>
+                  {prop.title}
+                </h3>
+                <p className="bento-desc" style={{ fontSize: '0.95rem', margin: 0 }}>
+                  {prop.desc}
                 </p>
               </div>
             ))}

@@ -31,6 +31,8 @@ export default function MotivationalPage() {
     { src: '/images/jumana-speaker2.png', alt: 'Jumana Judeh inspiring audience' },
     { src: '/images/jumana-speaker3.png', alt: 'Jumana Judeh leadership coaching' },
     { src: '/images/jumana-speaker4.png', alt: 'Jumana Judeh keynote presentation' },
+    { src: '/images/jumana-avatar-hd.jpg', alt: 'Jumana Judeh Executive Leader Portrait' },
+    { src: '/images/fb-detroit-research.jpg', alt: 'Detroit Ph.D. Urban Development Research' },
   ];
 
   return (
@@ -75,22 +77,36 @@ export default function MotivationalPage() {
       {/* Main Content */}
       <div className="container" style={{ padding: '4rem 2rem 5rem' }}>
         
-        {/* Editorial Philosophy Quote 1 Bento Card */}
+        {/* Editorial Philosophy Quote 1 Bento Card with Leader Portrait */}
         <div 
           className="bento-card" 
           style={{ 
-            maxWidth: '920px', 
+            maxWidth: '1000px', 
             margin: '0 auto 4rem',
-            textAlign: 'center',
             background: '#ffffff',
             borderTop: '5px solid var(--bento-gold)',
-            padding: '3rem 2.5rem'
+            padding: '3rem'
           }}
         >
-          <span className="bento-badge-tag">Guiding Philosophy</span>
-          <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--bento-text-main)', margin: '0.5rem 0', lineHeight: 1.25 }}>
-            “Master the tools you need to persuade, inspire and connect.”
-          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '2.5rem', alignItems: 'center' }}>
+            <div style={{ position: 'relative', width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', border: '3px solid var(--bento-gold)', flexShrink: 0, boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
+              <Image 
+                src="/images/jumana-avatar-hd.jpg" 
+                alt="Jumana Judeh, Success Coach & Keynote Speaker" 
+                fill 
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <div>
+              <span className="bento-badge-tag">Guiding Philosophy</span>
+              <h2 style={{ fontSize: '2.1rem', fontWeight: 800, color: 'var(--bento-text-main)', margin: '0.35rem 0', lineHeight: 1.25 }}>
+                “Master the tools you need to persuade, inspire and connect.”
+              </h2>
+              <p style={{ color: 'var(--bento-crimson)', fontWeight: 700, margin: '0.5rem 0 0', textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.9rem' }}>
+                Jumana Judeh — Founder, Speaker &amp; Executive Coach
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* 3 Step High-Impact Framework */}
@@ -133,18 +149,18 @@ export default function MotivationalPage() {
           </div>
         </div>
 
-        {/* Speaker Photo Gallery Bento */}
+        {/* Expanded Speaker & Community Photo Gallery Bento */}
         <div style={{ marginBottom: '5rem' }}>
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 3rem' }}>
-            <span className="bento-badge-tag">Live Engagements</span>
-            <h2 className="bento-title-large">Speaking &amp; Coaching In Action</h2>
-            <p className="bento-desc">Empowering corporate boards, industry conferences, and entrepreneurs nationwide.</p>
+            <span className="bento-badge-tag">Live Engagements &amp; Community</span>
+            <h2 className="bento-title-large">Speaking, Research &amp; Coaching In Action</h2>
+            <p className="bento-desc">Empowering corporate boards, industry conferences, urban development initiatives, and entrepreneurs nationwide.</p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.75rem' }}>
             {galleryImages.map((img, idx) => (
-              <div key={idx} className="bento-card" style={{ padding: '1rem', height: '360px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+              <div key={idx} className="bento-card" style={{ padding: '0.75rem', height: '340px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff' }}>
+                <div style={{ position: 'relative', width: '100%', height: '100%', borderRadius: 'var(--radius-sm)', overflow: 'hidden' }}>
                   <Image 
                     src={img.src} 
                     alt={img.alt} 

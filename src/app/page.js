@@ -76,6 +76,32 @@ export default function HomePage() {
                 <span className="bento-tag-item">Residential &amp; Land</span>
               </div>
 
+              {/* Photo Showcase from Facebook / Field Practice */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
+                <div style={{ position: 'relative', height: '140px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+                  <Image 
+                    src="/images/fb-property-taxes.jpg" 
+                    alt="Property Tax Valuation" 
+                    fill 
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '4px 8px', background: 'rgba(9,14,23,0.7)', color: '#fff', fontSize: '0.75rem', fontWeight: 700 }}>
+                    Tax Appeals &amp; Assessments
+                  </div>
+                </div>
+                <div style={{ position: 'relative', height: '140px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+                  <Image 
+                    src="/images/fb-market-trends.jpg" 
+                    alt="Market Trends Analysis" 
+                    fill 
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '4px 8px', background: 'rgba(9,14,23,0.7)', color: '#fff', fontSize: '0.75rem', fontWeight: 700 }}>
+                    Market Intelligence
+                  </div>
+                </div>
+              </div>
+
               <Link href="/valuation" className="bento-action-link">
                 Learn more about Valuation Practice &rarr;
               </Link>
@@ -83,10 +109,21 @@ export default function HomePage() {
 
             {/* Bento Card 2: 30+ Years & Key Metrics (Span 5 - Obsidian Dark Accent) */}
             <div className="bento-card bento-card-dark bento-span-5">
-              <span className="bento-badge-tag">Firm Heritage</span>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                <span className="bento-badge-tag">Firm Leadership</span>
+                <div style={{ position: 'relative', width: '56px', height: '56px', borderRadius: '50%', overflow: 'hidden', border: '2px solid var(--bento-gold)' }}>
+                  <Image 
+                    src="/images/jumana-avatar-hd.jpg" 
+                    alt="Jumana Judeh, MAI, CCIM" 
+                    fill 
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+              </div>
+
               <h2 className="bento-title-large">30+ Years of Authority</h2>
               <p className="bento-desc">
-                Rooted in Dearborn and serving clients across the entire State of Michigan with independent, defensible analysis and high-impact advisory.
+                Founded and directed by Jumana Judeh, MAI, CCIM, MCAO Certified General Appraiser. Rooted in Dearborn and serving clients across the entire State of Michigan with independent, defensible analysis and high-impact advisory.
               </p>
 
               <div className="bento-stats-row">
@@ -123,7 +160,20 @@ export default function HomePage() {
                 Work with a professional team with experience in commercial, industrial, office, vacant land, and retail property across Michigan markets. We offer property management, strategic leasing, and investor guidance.
               </p>
 
-              <div className="bento-tags-cloud" style={{ margin: '0.5rem 0 1.5rem' }}>
+              {/* Real Estate Building Photo from Facebook */}
+              <div style={{ position: 'relative', height: '160px', borderRadius: 'var(--radius-md)', overflow: 'hidden', marginBottom: '1.25rem', border: '1px solid #e2e8f0' }}>
+                <Image 
+                  src="/images/fb-cover-building.jpg" 
+                  alt="Michigan Commercial and Residential Properties" 
+                  fill 
+                  style={{ objectFit: 'cover' }}
+                />
+                <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '6px 12px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.8rem', fontWeight: 600 }}>
+                  Commercial, Multi-Family &amp; Retail Transactions
+                </div>
+              </div>
+
+              <div className="bento-tags-cloud" style={{ margin: '0 0 1.5rem' }}>
                 <span className="bento-tag-item">Commercial Assets</span>
                 <span className="bento-tag-item">Property Management</span>
                 <span className="bento-tag-item">Industrial &amp; Retail</span>
@@ -152,7 +202,27 @@ export default function HomePage() {
                 Build a successful business and team with a speaker and coach on leadership, success and entrepreneurial skills. Empowering leaders, organizations, and youth across corporate and educational stages.
               </p>
 
-              <div className="bento-tags-cloud" style={{ margin: '0.5rem 0 1.5rem' }}>
+              {/* Live Speaker Photo from engagements */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.25rem' }}>
+                <div style={{ position: 'relative', height: '140px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0', background: '#f8fafc' }}>
+                  <Image 
+                    src="/images/jumana-speaker1.png" 
+                    alt="Jumana Judeh Keynote" 
+                    fill 
+                    style={{ objectFit: 'contain', padding: '6px' }}
+                  />
+                </div>
+                <div style={{ position: 'relative', height: '140px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0', background: '#f8fafc' }}>
+                  <Image 
+                    src="/images/jumana-speaker2.png" 
+                    alt="Jumana Judeh Leadership" 
+                    fill 
+                    style={{ objectFit: 'contain', padding: '6px' }}
+                  />
+                </div>
+              </div>
+
+              <div className="bento-tags-cloud" style={{ margin: '0 0 1.5rem' }}>
                 <span className="bento-tag-item">Keynote Speaking</span>
                 <span className="bento-tag-item">Executive Coaching</span>
                 <span className="bento-tag-item">Team Success</span>
