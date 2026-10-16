@@ -15,7 +15,7 @@ export default function HomePage() {
           ========================================================================== */}
       <section
         className="bento-hero-section"
-        style={{ backgroundImage: `url('/images/hero-building-bg.jpg')` }}
+        style={{ backgroundImage: `url('/images/hero-new-architecture.jpg')` }}
       >
         <div className="bento-hero-overlay" />
 
