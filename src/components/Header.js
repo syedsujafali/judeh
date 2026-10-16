@@ -13,7 +13,7 @@ export default function Header() {
     { label: 'Judeh Group', href: '/' },
     { label: 'About Us', href: '/about' },
     { label: 'Valuation', href: '/valuation' },
-    { label: 'Appraisal', href: '/valuation#appraisal' },
+    { label: 'Appraisal', href: '/appraisal' },
     { label: 'Consulting', href: '/valuation#consulting' },
     { label: 'Market Data', href: '/valuation#market-data', highlight: true },
     { label: 'Contact Us', href: '/#contact-section' },
