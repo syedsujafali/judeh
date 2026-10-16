@@ -13,12 +13,12 @@ export default function HomePage() {
       {/* ==========================================================================
           ARCHITECTURAL HERO (Full-Bleed Background + Exact User Typography)
           ========================================================================== */}
-      <section 
-        className="bento-hero-section" 
+      <section
+        className="bento-hero-section"
         style={{ backgroundImage: `url('/images/hero-building-bg.jpg')` }}
       >
         <div className="bento-hero-overlay" />
-        
+
         <div className="bento-hero-content">
           <span className="bento-hero-tag">
             WELCOME TO
@@ -35,11 +35,128 @@ export default function HomePage() {
 
           <div className="bento-hero-actions">
             <Link href="/valuation" className="btn-bento-primary">
-              Explore Valuation Team &rarr;
-            </Link>
+              Explore Valuation Team </Link>
             <Link href="#architecture" className="btn-bento-gold">
               Explore Our Practices
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================================================
+          ABOUT US SPOTLIGHT SECTION (Immediately After Hero)
+          ========================================================================== */}
+      <section className="home-about-section">
+        <div className="container">
+          <div className="home-about-card">
+            <div className="home-about-grid">
+
+              {/* President & Leader Portrait */}
+              <div className="home-about-portrait-wrap">
+                <div className="home-about-img-box">
+                  <Image
+                    src="/images/jumana-about-jj.jpg"
+                    alt="Jumana Judeh, PhD, MAI, CCIM, MCAO"
+                    fill
+                    priority
+                    style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
+                  />
+                  <div className="home-about-badge-overlay">
+                    <span>30+ Years Authority</span>
+                  </div>
+                </div>
+
+                <div className="home-about-author-meta">
+                  <h4>Jumana Judeh</h4>
+                  <p>PhD, MAI, CCIM, MCAO &bull; President &amp; Founder</p>
+                  <p className="home-about-role-note">Appointed Chair by Governor of Michigan</p>
+                </div>
+              </div>
+
+              {/* Story & Value Content */}
+              <div className="home-about-content">
+                <div className="home-about-tag-row">
+                  <span className="bento-badge-tag">About The Judeh Group</span>
+                  <span className="badge-cert-pill">100% Certified Woman-Owned</span>
+                </div>
+
+                <h2 className="home-about-title">
+                  Small Means Special Attention &amp; Always Answering The Phone
+                </h2>
+
+                <p className="home-about-p">
+                  For over three decades, <strong>Judeh &amp; Associates</strong> has delivered trusted real estate valuation, expert witness testimony, and consulting across southeast and western Michigan. Founded by Jumana Judeh, our firm combines deep analytical rigor with unmatched local market intelligence.
+                </p>
+
+                <p className="home-about-p">
+                  Whether performing multi-parcel eminent domain valuations for major public works like the Gordie Howe International Bridge and Detroit Transportation Corporation, or advising private investors and real estate clients, our boutique approach guarantees principal-level attention on every engagement.
+                </p>
+
+                {/* Highlights Grid */}
+                <div className="home-about-highlights">
+                  <div className="home-about-highlight-item">
+                    <span className="highlight-num">30+</span>
+                    <span className="highlight-label">Years of Michigan Valuation Leadership</span>
+                  </div>
+                  <div className="home-about-highlight-item">
+                    <span className="highlight-num">MAI &amp; CCIM</span>
+                    <span className="highlight-label">Dual Elite Industry Designations</span>
+                  </div>
+                  <div className="home-about-highlight-item">
+                    <span className="highlight-num">10,000+</span>
+                    <span className="highlight-label">Properties Valued &amp; Assessed</span>
+                  </div>
+                  <div className="home-about-highlight-item">
+                    <span className="highlight-num">State &amp; Fed</span>
+                    <span className="highlight-label">Trusted Court &amp; Municipal Experts</span>
+                  </div>
+                </div>
+
+                {/* Badges & Actions */}
+                <div className="home-about-footer-row">
+                  <div className="home-about-certs-row">
+                    <div className="home-about-cert-mini" title="Certified Woman-Owned Business Enterprise">
+                      <Image
+                        src="/images/woman-owned-cert.jpg"
+                        alt="Woman Owned Business Certification"
+                        width={64}
+                        height={64}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                    <div className="home-about-cert-mini" title="Disadvantaged Business Enterprise (DBE)">
+                      <Image
+                        src="/images/dbe-cert.jpg"
+                        alt="Disadvantaged Business Enterprise DBE"
+                        width={64}
+                        height={64}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                    <div className="home-about-cert-mini" title="Small Business Enterprise (SBE)">
+                      <Image
+                        src="/images/sbe-cert.png"
+                        alt="Small Business Enterprise SBE"
+                        width={64}
+                        height={64}
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="home-about-btns">
+                    <Link href="/about" className="btn-bento-primary">
+                      Read Full Story &amp; Bio &rarr;
+                    </Link>
+                    <Link href="#contact" className="btn-bento-gold">
+                      Contact Jumana Directly
+                    </Link>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
@@ -50,16 +167,16 @@ export default function HomePage() {
       <section className="bento-grid-section" id="architecture">
         <div className="container">
           <div className="bento-layout">
-            
+
             {/* Bento Card 1: Valuation Practice (Featured Span 7) */}
             <div className="bento-card bento-span-7">
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
                 <span className="bento-badge-tag">Core Valuation Practice</span>
                 <div style={{ position: 'relative', width: '48px', height: '48px' }}>
-                  <Image 
-                    src="/images/valuation-icon.png" 
-                    alt="Valuation Icon" 
-                    fill 
+                  <Image
+                    src="/images/valuation-icon.png"
+                    alt="Valuation Icon"
+                    fill
                     style={{ objectFit: 'contain' }}
                   />
                 </div>
@@ -68,7 +185,7 @@ export default function HomePage() {
               <p className="bento-desc">
                 We understand what creates property value, how such value is influenced and how the characteristics of a property are affected by market conditions. Over 30 years of undisputed valuation leadership and forensic consultation.
               </p>
-              
+
               <div className="bento-tags-cloud" style={{ margin: '0.5rem 0 1.5rem' }}>
                 <span className="bento-tag-item">Commercial Real Estate</span>
                 <span className="bento-tag-item">Litigation &amp; Expert Witness</span>
@@ -79,20 +196,20 @@ export default function HomePage() {
               {/* Photo Showcase from Facebook / Field Practice */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.5rem' }}>
                 <div className="bento-img-medium" style={{ height: '200px' }}>
-                  <Image 
-                    src="/images/fb-property-taxes.jpg" 
-                    alt="Property Tax Valuation" 
-                    fill 
+                  <Image
+                    src="/images/fb-property-taxes.jpg"
+                    alt="Property Tax Valuation"
+                    fill
                   />
                   <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '8px 12px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.85rem', fontWeight: 700 }}>
                     Tax Appeals &amp; Assessments
                   </div>
                 </div>
                 <div className="bento-img-medium" style={{ height: '200px' }}>
-                  <Image 
-                    src="/images/fb-market-trends.jpg" 
-                    alt="Market Trends Analysis" 
-                    fill 
+                  <Image
+                    src="/images/fb-market-trends.jpg"
+                    alt="Market Trends Analysis"
+                    fill
                   />
                   <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '8px 12px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.85rem', fontWeight: 700 }}>
                     Market Intelligence
@@ -110,10 +227,10 @@ export default function HomePage() {
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <span className="bento-badge-tag">Firm Leadership</span>
                 <div style={{ position: 'relative', width: '64px', height: '64px', borderRadius: '50%', overflow: 'hidden', border: '2.5px solid var(--bento-gold)', flexShrink: 0 }}>
-                  <Image 
-                    src="/images/jumana-avatar-hd.jpg" 
-                    alt="Jumana Judeh, MAI, CCIM" 
-                    fill 
+                  <Image
+                    src="/images/jumana-avatar-hd.jpg"
+                    alt="Jumana Judeh, MAI, CCIM"
+                    fill
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
@@ -145,10 +262,10 @@ export default function HomePage() {
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
                 <span className="bento-badge-tag">Commercial &amp; Residential Brokerage</span>
                 <div style={{ position: 'relative', width: '48px', height: '48px' }}>
-                  <Image 
-                    src="/images/realestate-icon.png" 
-                    alt="Real Estate Icon" 
-                    fill 
+                  <Image
+                    src="/images/realestate-icon.png"
+                    alt="Real Estate Icon"
+                    fill
                     style={{ objectFit: 'contain' }}
                   />
                 </div>
@@ -160,10 +277,10 @@ export default function HomePage() {
 
               {/* Real Estate Building Photo from Facebook */}
               <div className="bento-img-medium" style={{ height: '220px', marginBottom: '1.5rem' }}>
-                <Image 
-                  src="/images/fb-cover-building.jpg" 
-                  alt="Michigan Commercial and Residential Properties" 
-                  fill 
+                <Image
+                  src="/images/fb-cover-building.jpg"
+                  alt="Michigan Commercial and Residential Properties"
+                  fill
                 />
                 <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '8px 14px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
                   Commercial, Multi-Family &amp; Retail Transactions
@@ -186,10 +303,10 @@ export default function HomePage() {
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
                 <span className="bento-badge-tag">Executive Keynotes &amp; Leadership</span>
                 <div style={{ position: 'relative', width: '48px', height: '48px' }}>
-                  <Image 
-                    src="/images/motivational-icon.png" 
-                    alt="Motivational Icon" 
-                    fill 
+                  <Image
+                    src="/images/motivational-icon.png"
+                    alt="Motivational Icon"
+                    fill
                     style={{ objectFit: 'contain' }}
                   />
                 </div>
@@ -202,17 +319,17 @@ export default function HomePage() {
               {/* Live Speaker Photo from engagements */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
                 <div className="bento-img-contain" style={{ height: '220px' }}>
-                  <Image 
-                    src="/images/jumana-speaker1.png" 
-                    alt="Jumana Judeh Keynote" 
-                    fill 
+                  <Image
+                    src="/images/jumana-speaker1.png"
+                    alt="Jumana Judeh Keynote"
+                    fill
                   />
                 </div>
                 <div className="bento-img-contain" style={{ height: '220px' }}>
-                  <Image 
-                    src="/images/jumana-speaker2.png" 
-                    alt="Jumana Judeh Leadership" 
-                    fill 
+                  <Image
+                    src="/images/jumana-speaker2.png"
+                    alt="Jumana Judeh Leadership"
+                    fill
                   />
                 </div>
               </div>
