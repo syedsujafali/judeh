@@ -208,16 +208,34 @@ export default function HomePage() {
               </div>
 
               <div className="valuation-big-card-body">
-                <span className="bento-badge-tag">Commercial &amp; Industrial</span>
-                <h3>Commercial Real Estate Valuation</h3>
-                <p>
-                  Comprehensive valuation reports for multi-tenant office complexes, industrial manufacturing facilities, retail centers, medical suites, and eminent domain parcels throughout the State of Michigan.
-                </p>
+                <div>
+                  <span className="bento-badge-tag">Commercial &amp; Industrial</span>
+                  <h3>Commercial Real Estate Valuation</h3>
+                  <p>
+                    Comprehensive certified valuation reports for multi-tenant office complexes, industrial manufacturing facilities, retail centers, medical suites, and eminent domain parcels throughout the State of Michigan.
+                  </p>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.65rem 1.25rem', margin: '1rem 0 1.5rem', padding: '1rem 0', borderTop: '1px solid #f1f5f9', borderBottom: '1px solid #f1f5f9' }}>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--bento-obsidian)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <span style={{ color: 'var(--bento-gold)', fontWeight: 800 }}>▸</span> Going Concern Valuations
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--bento-obsidian)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <span style={{ color: 'var(--bento-gold)', fontWeight: 800 }}>▸</span> Eminent Domain / Takings
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--bento-obsidian)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <span style={{ color: 'var(--bento-gold)', fontWeight: 800 }}>▸</span> Special Purpose Facilities
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--bento-obsidian)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <span style={{ color: 'var(--bento-gold)', fontWeight: 800 }}>▸</span> Tax Tribunal &amp; Appeals
+                    </div>
+                  </div>
+                </div>
+
                 <div className="valuation-big-card-footer">
                   <div className="valuation-pill-tags">
-                    <span>ARGUS DCF Modeling</span>
-                    <span>Cap Rate Extraction</span>
-                    <span>USPAP &amp; FIRREA Compliant</span>
+                    <span>ARGUS DCF</span>
+                    <span>Cap Rates</span>
+                    <span>USPAP &amp; FIRREA</span>
                   </div>
                   <Link href="/valuation" className="valuation-inline-link">
                     Valuation Services &rarr;
