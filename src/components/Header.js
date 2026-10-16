@@ -14,8 +14,8 @@ export default function Header() {
     { label: 'About Us', href: '/about' },
     { label: 'Valuation', href: '/valuation' },
     { label: 'Appraisal', href: '/appraisal' },
-    { label: 'Consulting', href: '/valuation#consulting' },
-    { label: 'Market Data', href: '/valuation#market-data', highlight: true },
+    { label: 'Consulting', href: '/consulting' },
+    { label: 'Market Data', href: '/newsletter', highlight: true },
     { label: 'Contact Us', href: '/#contact-section' },
   ];
 

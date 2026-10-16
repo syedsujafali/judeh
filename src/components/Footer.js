@@ -31,8 +31,10 @@ export default function Footer() {
             <h4>Quick Links</h4>
             <ul className="bento-footer-links">
               <li><Link href="/about">About Us &amp; Leadership</Link></li>
-              <li><Link href="/valuation">Valuation &amp; Consulting</Link></li>
+              <li><Link href="/valuation">Valuation Practice</Link></li>
               <li><Link href="/appraisal">Appraisal Practice</Link></li>
+              <li><Link href="/consulting">Consulting Services</Link></li>
+              <li><Link href="/newsletter">Quarterly Market News</Link></li>
               <li><Link href="/realtors">Realtors Team</Link></li>
               <li><Link href="/motivational">Motivational Team</Link></li>
               <li><Link href="/valuation#coverage">Michigan Service Map</Link></li>
