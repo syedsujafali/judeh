@@ -143,17 +143,28 @@ img {
 }
 
 .bento-nav-link {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--bento-text-main);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #3b5a75;
   transition: var(--transition);
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.25rem;
+  display: inline-block;
+  letter-spacing: -0.01em;
 }
 
 .bento-nav-link:hover,
 .bento-nav-link.active {
   color: var(--bento-crimson);
+}
+
+.bento-nav-link.bento-nav-highlight {
+  color: #8b0000;
+  font-weight: 600;
+}
+
+.bento-nav-link.bento-nav-highlight:hover {
+  color: var(--bento-gold);
 }
 
 .bento-nav-link.active::after {
@@ -163,7 +174,7 @@ img {
   left: 0;
   right: 0;
   height: 2.5px;
-  background: var(--bento-gold);
+  background: var(--bento-crimson);
   border-radius: 2px;
 }
 

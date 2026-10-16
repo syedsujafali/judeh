@@ -105,7 +105,7 @@ export default function ValuationPage() {
       <div className="container" style={{ padding: '3.5rem 2rem 5rem' }}>
         
         {/* Core Value Proposition Bento Card with Leader Badge */}
-        <div className="bento-card" style={{ marginBottom: '3.5rem', background: '#ffffff' }}>
+        <div className="bento-card" id="appraisal" style={{ marginBottom: '3.5rem', background: '#ffffff' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '3rem', alignItems: 'center' }}>
             <div>
               <span className="bento-badge-tag">Analytical Excellence</span>
@@ -135,7 +135,7 @@ export default function ValuationPage() {
         </div>
 
         {/* Real Estate Market Intelligence Section (From Facebook CoStar Analysis) */}
-        <div style={{ marginBottom: '4rem' }}>
+        <div id="market-data" style={{ marginBottom: '4rem', scrollMarginTop: '110px' }}>
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 2.5rem' }}>
             <span className="bento-badge-tag">Market Analytics</span>
             <h2 className="bento-title-large">Following Market Trends &amp; Transaction Volumes</h2>
@@ -202,7 +202,7 @@ export default function ValuationPage() {
         </div>
 
         {/* Specialized Legal & Damage Services - Bento 2 Columns */}
-        <div style={{ marginBottom: '4rem' }}>
+        <div id="consulting" style={{ marginBottom: '4rem', scrollMarginTop: '110px' }}>
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 2.5rem' }}>
             <span className="bento-badge-tag">Forensic Appraisal Services</span>
             <h2 className="bento-title-large">Specialized Legal &amp; Damage Valuations</h2>

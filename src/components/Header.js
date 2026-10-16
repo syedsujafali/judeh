@@ -10,11 +10,13 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { label: 'Overview', href: '/' },
+    { label: 'Judeh Group', href: '/' },
     { label: 'About Us', href: '/about' },
-    { label: 'Valuation & Advisory', href: '/valuation' },
-    { label: 'Realtors Team', href: '/realtors' },
-    { label: 'Motivational Team', href: '/motivational' },
+    { label: 'Valuation', href: '/valuation' },
+    { label: 'Appraisal', href: '/valuation#appraisal' },
+    { label: 'Consulting', href: '/valuation#consulting' },
+    { label: 'Market Data', href: '/valuation#market-data', highlight: true },
+    { label: 'Contact Us', href: '/#contact-section' },
   ];
 
   return (
@@ -62,10 +64,10 @@ export default function Header() {
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
-                  <li key={link.href}>
+                  <li key={link.label}>
                     <Link 
                       href={link.href}
-                      className={`bento-nav-link ${isActive ? 'active' : ''}`}
+                      className={`bento-nav-link ${isActive ? 'active' : ''} ${link.highlight ? 'bento-nav-highlight' : ''}`}
                       onClick={() => setMenuOpen(false)}
                     >
                       {link.label}
@@ -73,15 +75,6 @@ export default function Header() {
                   </li>
                 );
               })}
-              <li>
-                <Link 
-                  href="/#contact-section" 
-                  className="bento-cta-btn" 
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Contact Us &rarr;
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>
