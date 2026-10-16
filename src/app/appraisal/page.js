@@ -305,89 +305,52 @@ export default function AppraisalPage() {
         </div>
 
         {/* ==========================================================================
-            3-COLUMN DETAIL GRID (As structured on judehonline.com/appraisal/)
+            TWO-COLUMN BALANCED TOP ROW: Scope of Work & Property Types
             ========================================================================== */}
-        <div style={{ marginBottom: '4.5rem' }}>
-          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 2.75rem' }}>
-            <span className="bento-badge-tag">Comprehensive Scope</span>
-            <h2 className="bento-title-large">Purpose, Services &amp; Property Types</h2>
-            <p className="bento-desc">
-              Whether you are an attorney preparing for trial, a lender requiring underwriting review, or a property owner filing an assessment appeal, our practice delivers undisputed valuation authority.
-            </p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem', alignItems: 'start' }}>
+        <div style={{ marginBottom: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '2rem', alignItems: 'stretch' }}>
             
-            {/* Column 1: Purpose of the Appraisal Assignment */}
-            <div className="bento-card" style={{ background: '#ffffff', padding: '2.5rem 2rem', borderTop: '5px solid var(--bento-crimson)' }}>
+            {/* Box 1: Purpose of the Appraisal Assignment */}
+            <div className="bento-card" style={{ background: '#ffffff', padding: '2.5rem', borderTop: '5px solid var(--bento-crimson)' }}>
               <span className="bento-badge-tag">Scope of Work</span>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--bento-obsidian)', marginBottom: '1.25rem' }}>
+              <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--bento-obsidian)', marginBottom: '1rem' }}>
                 Purpose of the Appraisal Assignment
               </h3>
-              <p className="bento-desc" style={{ fontSize: '0.92rem', marginBottom: '1.5rem' }}>
-                Our appraisals are commissioned across a broad spectrum of commercial and legal applications:
+              <p className="bento-desc" style={{ fontSize: '0.95rem', marginBottom: '1.5rem' }}>
+                Our certified appraisals are commissioned across a broad spectrum of commercial, municipal, and legal applications:
               </p>
               
-              <ul className="bento-bullet-list" style={{ columns: 1 }}>
+              <ul className="bento-bullet-list" style={{ columns: 2, columnGap: '2rem' }}>
                 {assignmentPurposes.map((p, idx) => (
-                  <li key={idx} style={{ fontSize: '0.92rem', marginBottom: '0.65rem' }}>
+                  <li key={idx} style={{ fontSize: '0.9rem', marginBottom: '0.6rem', breakInside: 'avoid' }}>
                     {p}
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Column 2: Appraisal Services by Stakeholder */}
-            <div className="bento-card" style={{ background: '#ffffff', padding: '2.5rem 2rem', borderTop: '5px solid var(--bento-gold)' }}>
-              <span className="bento-badge-tag">Client Categories</span>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--bento-obsidian)', marginBottom: '1.25rem' }}>
-                Appraisal Services
-              </h3>
-              <p className="bento-desc" style={{ fontSize: '0.92rem', marginBottom: '1.5rem' }}>
-                Specialized compliance and advisory designed for key industries:
-              </p>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                {stakeholderServices.map((s, idx) => (
-                  <div key={idx} style={{ paddingBottom: '1.1rem', borderBottom: idx < stakeholderServices.length - 1 ? '1px solid #f1f5f9' : 'none' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
-                      <h4 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: 'var(--bento-crimson)' }}>
-                        {s.stakeholder}
-                      </h4>
-                      <span style={{ fontSize: '0.72rem', fontWeight: 700, background: '#f8fafc', border: '1px solid #e2e8f0', padding: '0.2rem 0.55rem', borderRadius: '9999px', color: '#64748b' }}>
-                        {s.badge}
-                      </span>
-                    </div>
-                    <ul style={{ margin: 0, paddingLeft: '1.25rem', fontSize: '0.88rem', color: '#475569', lineHeight: '1.5' }}>
-                      {s.points.map((pt, pIdx) => (
-                        <li key={pIdx} style={{ marginBottom: '0.25rem' }}>{pt}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Column 3: Property Types */}
-            <div className="bento-card" style={{ background: '#ffffff', padding: '2.5rem 2rem', borderTop: '5px solid var(--bento-crimson)' }}>
-              <span className="bento-badge-tag">Asset Portfolio</span>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--bento-obsidian)', marginBottom: '1.25rem' }}>
-                Property Types
-              </h3>
-              <p className="bento-desc" style={{ fontSize: '0.92rem', marginBottom: '1.5rem' }}>
-                Over 30 years of experience appraising diverse asset classes throughout Michigan:
-              </p>
-              
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-                {propertyTypes.map((t, idx) => (
-                  <span key={idx} className="bento-tag-item" style={{ fontSize: '0.85rem', padding: '0.4rem 0.85rem' }}>
-                    {t}
-                  </span>
-                ))}
+            {/* Box 2: Property Types & Visual Showcase */}
+            <div className="bento-card" style={{ background: '#ffffff', padding: '2.5rem', borderTop: '5px solid var(--bento-gold)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <span className="bento-badge-tag">Asset Portfolio</span>
+                <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--bento-obsidian)', marginBottom: '1rem' }}>
+                  Property Types
+                </h3>
+                <p className="bento-desc" style={{ fontSize: '0.95rem', marginBottom: '1.25rem' }}>
+                  Over 30 years of experience appraising diverse commercial, industrial, and residential asset classes throughout Michigan:
+                </p>
+                
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.75rem' }}>
+                  {propertyTypes.map((t, idx) => (
+                    <span key={idx} className="bento-tag-item" style={{ fontSize: '0.85rem', padding: '0.35rem 0.8rem' }}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              {/* Extra Image Showcase Card */}
-              <div style={{ position: 'relative', height: '220px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }}>
+              {/* Showcase Image */}
+              <div style={{ position: 'relative', height: '180px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0', boxShadow: '0 4px 15px rgba(0,0,0,0.06)' }}>
                 <Image 
                   src="/images/fb-cover-building.jpg" 
                   alt="Michigan Commercial and Special Use Real Estate" 
@@ -397,6 +360,39 @@ export default function AppraisalPage() {
               </div>
             </div>
 
+          </div>
+        </div>
+
+        {/* ==========================================================================
+            CLIENT CATEGORIES (Appraisal Services by Stakeholder - Multi-Column Bento)
+            ========================================================================== */}
+        <div style={{ marginBottom: '4.5rem' }}>
+          <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 2.75rem' }}>
+            <span className="bento-badge-tag">Industry Stakeholders</span>
+            <h2 className="bento-title-large">Appraisal Services by Client Category</h2>
+            <p className="bento-desc">
+              Specialized valuation advisory and compliance designed for key corporate, legal, and institutional partners across Michigan.
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.5rem' }}>
+            {stakeholderServices.map((s, idx) => (
+              <div key={idx} className="bento-card" style={{ background: '#ffffff', padding: '1.75rem 1.5rem', borderLeft: '4px solid var(--bento-gold)', transition: 'var(--transition)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <h4 style={{ margin: 0, fontSize: '1.15rem', fontWeight: 800, color: 'var(--bento-crimson)' }}>
+                    {s.stakeholder}
+                  </h4>
+                  <span style={{ fontSize: '0.72rem', fontWeight: 700, background: '#f8fafc', border: '1px solid #e2e8f0', padding: '0.2rem 0.6rem', borderRadius: '9999px', color: '#64748b' }}>
+                    {s.badge}
+                  </span>
+                </div>
+                <ul style={{ margin: 0, paddingLeft: '1.25rem', fontSize: '0.9rem', color: '#475569', lineHeight: '1.6' }}>
+                  {s.points.map((pt, pIdx) => (
+                    <li key={pIdx} style={{ marginBottom: '0.35rem' }}>{pt}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
 
