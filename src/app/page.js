@@ -291,49 +291,6 @@ export default function HomePage() {
 
           </div>
 
-          {/* Statewide Territorial Visual Bar with Dual Big Maps */}
-          <div className="valuation-coverage-banner">
-            <div className="valuation-coverage-grid">
-              
-              <div className="valuation-map-card">
-                <div className="valuation-map-img">
-                  <Image 
-                    src="/images/michigan-map.jpg" 
-                    alt="Statewide Non-Residential Appraisal Coverage" 
-                    fill 
-                    style={{ objectFit: 'cover' }}
-                  />
-                  <div className="valuation-map-badge">
-                    <span>Entire State of Michigan</span>
-                  </div>
-                </div>
-                <div className="valuation-map-meta">
-                  <h4>Non-Residential Appraisal Services</h4>
-                  <p>Covering the entire State of Michigan including the Upper Peninsula for commercial, industrial, and infrastructure assignments.</p>
-                </div>
-              </div>
-
-              <div className="valuation-map-card">
-                <div className="valuation-map-img">
-                  <Image 
-                    src="/images/four-counties-map.jpg" 
-                    alt="Four Counties Residential Appraisal Coverage" 
-                    fill 
-                    style={{ objectFit: 'cover' }}
-                  />
-                  <div className="valuation-map-badge" style={{ background: 'var(--bento-gold)', color: '#090e17' }}>
-                    <span>Wayne &bull; Oakland &bull; Macomb &bull; Washtenaw</span>
-                  </div>
-                </div>
-                <div className="valuation-map-meta">
-                  <h4>Residential Appraisal Services</h4>
-                  <p>Dedicated high-touch residential appraisal services across the premier 4-county Southeast Michigan metropolitan corridor.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
         </div>
       </section>
 
