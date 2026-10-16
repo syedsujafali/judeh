@@ -586,6 +586,8 @@ img {
 .valuation-big-card.valuation-big-featured {
   grid-column: span 7;
   grid-row: span 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .valuation-big-img-wrap {
@@ -596,7 +598,9 @@ img {
 }
 
 .valuation-big-featured .valuation-big-img-wrap {
-  height: 520px;
+  flex: 1 1 0;
+  min-height: 440px;
+  height: auto;
 }
 
 .valuation-big-gradient-overlay {
@@ -630,6 +634,7 @@ img {
 
 .valuation-big-featured .valuation-big-card-body {
   padding: 2rem 2.25rem 2.25rem;
+  flex: 0 0 auto;
 }
 
 .valuation-big-card-body h3 {

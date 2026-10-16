@@ -166,7 +166,7 @@ export default function HomePage() {
           ========================================================================== */}
       <section className="home-valuation-showcase-section" id="valuation-practice">
         <div className="container">
-          
+
           <div className="valuation-showcase-header">
             <div className="valuation-showcase-title-wrap">
               <span className="bento-badge-tag">Flagship Valuation Practice</span>
@@ -190,14 +190,14 @@ export default function HomePage() {
 
           {/* Big Featured Images Gallery Grid */}
           <div className="valuation-big-images-grid">
-            
+
             {/* Big Feature 1: Commercial & Special Purpose Properties (Large Left 7 cols) */}
             <div className="valuation-big-card valuation-big-featured">
               <div className="valuation-big-img-wrap">
-                <Image 
-                  src="/images/fb-cover-building.jpg" 
-                  alt="Michigan Commercial and Mixed-Use Valuation" 
-                  fill 
+                <Image
+                  src="/images/commercial-real-estate-clean.jpg"
+                  alt="Michigan Commercial and Mixed-Use Valuation"
+                  fill
                   priority
                   style={{ objectFit: 'cover' }}
                 />
@@ -247,10 +247,10 @@ export default function HomePage() {
             {/* Big Feature 2: Market Analytics & CoStar Research (Top Right 5 cols) */}
             <div className="valuation-big-card">
               <div className="valuation-big-img-wrap" style={{ height: '240px' }}>
-                <Image 
-                  src="/images/fb-market-chart.jpg" 
-                  alt="Commercial Real Estate Transaction Volume and Market Trends" 
-                  fill 
+                <Image
+                  src="/images/fb-market-chart.jpg"
+                  alt="Commercial Real Estate Transaction Volume and Market Trends"
+                  fill
                   style={{ objectFit: 'contain', background: '#f8fafc', padding: '12px' }}
                 />
                 <div className="valuation-big-card-badge" style={{ background: 'var(--bento-crimson)' }}>
@@ -278,10 +278,10 @@ export default function HomePage() {
             {/* Big Feature 3: Forensic & Damage Appraisals (Bottom Right 5 cols) */}
             <div className="valuation-big-card">
               <div className="valuation-big-img-wrap" style={{ height: '240px' }}>
-                <Image 
-                  src="/images/fb-property-taxes.jpg" 
-                  alt="Property Tax Appeals and Assessments" 
-                  fill 
+                <Image
+                  src="/images/fb-property-taxes.jpg"
+                  alt="Property Tax Appeals and Assessments"
+                  fill
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="valuation-big-gradient-overlay" />
@@ -320,93 +320,10 @@ export default function HomePage() {
           <div className="bento-layout">
 
             {/* Bento Card 1: Valuation Practice (Featured Span 7) */}
-            <div className="bento-card bento-span-7">
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
-                <span className="bento-badge-tag">Core Valuation Practice</span>
-                <div style={{ position: 'relative', width: '48px', height: '48px' }}>
-                  <Image
-                    src="/images/valuation-icon.png"
-                    alt="Valuation Icon"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-              </div>
-              <h2 className="bento-title-large">Valuation Team</h2>
-              <p className="bento-desc">
-                We understand what creates property value, how such value is influenced and how the characteristics of a property are affected by market conditions. Over 30 years of undisputed valuation leadership and forensic consultation.
-              </p>
 
-              <div className="bento-tags-cloud" style={{ margin: '0.5rem 0 1.5rem' }}>
-                <span className="bento-tag-item">Commercial Real Estate</span>
-                <span className="bento-tag-item">Litigation &amp; Expert Witness</span>
-                <span className="bento-tag-item">Insurance &amp; Title Claims</span>
-                <span className="bento-tag-item">Residential &amp; Land</span>
-              </div>
-
-              {/* Photo Showcase from Facebook / Field Practice */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.5rem' }}>
-                <div className="bento-img-medium" style={{ height: '200px' }}>
-                  <Image
-                    src="/images/fb-property-taxes.jpg"
-                    alt="Property Tax Valuation"
-                    fill
-                  />
-                  <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '8px 12px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.85rem', fontWeight: 700 }}>
-                    Tax Appeals &amp; Assessments
-                  </div>
-                </div>
-                <div className="bento-img-medium" style={{ height: '200px' }}>
-                  <Image
-                    src="/images/fb-market-trends.jpg"
-                    alt="Market Trends Analysis"
-                    fill
-                  />
-                  <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '8px 12px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.85rem', fontWeight: 700 }}>
-                    Market Intelligence
-                  </div>
-                </div>
-              </div>
-
-              <Link href="/valuation" className="bento-action-link">
-                Learn more about Valuation Practice &rarr;
-              </Link>
-            </div>
 
             {/* Bento Card 2: 30+ Years & Key Metrics (Span 5 - Obsidian Dark Accent) */}
-            <div className="bento-card bento-card-dark bento-span-5">
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                <span className="bento-badge-tag">Firm Leadership</span>
-                <div style={{ position: 'relative', width: '64px', height: '64px', borderRadius: '50%', overflow: 'hidden', border: '2.5px solid var(--bento-gold)', flexShrink: 0 }}>
-                  <Image
-                    src="/images/jumana-avatar-hd.jpg"
-                    alt="Jumana Judeh, MAI, CCIM"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
-              </div>
 
-              <h2 className="bento-title-large">30+ Years of Authority</h2>
-              <p className="bento-desc">
-                Founded and directed by Jumana Judeh, MAI, CCIM, MCAO Certified General Appraiser. Rooted in Dearborn and serving clients across the entire State of Michigan with independent, defensible analysis and high-impact advisory.
-              </p>
-
-              <div className="bento-stats-row">
-                <div className="bento-stat-item">
-                  <h3>30+</h3>
-                  <p>Years Experience</p>
-                </div>
-                <div className="bento-stat-item">
-                  <h3>100%</h3>
-                  <p>MI Coverage</p>
-                </div>
-                <div className="bento-stat-item">
-                  <h3>3</h3>
-                  <p>Core Teams</p>
-                </div>
-              </div>
-            </div>
 
             {/* Bento Card 3: Realtors Team (Span 6) */}
             <div className="bento-card bento-span-6">
