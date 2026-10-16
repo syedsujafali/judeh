@@ -637,15 +637,12 @@ img {
   overflow: hidden;
   border: 1px solid #e2e8f0;
   background-color: #ffffff;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
 }
 
 .bento-img-contain img {
   object-fit: contain !important;
+  padding: 0.75rem;
 }
 
 /* Quotes */
