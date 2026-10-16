@@ -28,8 +28,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="bento-footer-col">
-            <h4>Practice Areas</h4>
+            <h4>Quick Links</h4>
             <ul className="bento-footer-links">
+              <li><Link href="/about">About Us &amp; Leadership</Link></li>
               <li><Link href="/valuation">Valuation &amp; Appraisal</Link></li>
               <li><Link href="/realtors">Realtors Team</Link></li>
               <li><Link href="/motivational">Motivational Team</Link></li>

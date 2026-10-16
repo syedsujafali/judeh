@@ -11,6 +11,7 @@ export default function Header() {
 
   const navLinks = [
     { label: 'Overview', href: '/' },
+    { label: 'About Us', href: '/about' },
     { label: 'Valuation & Advisory', href: '/valuation' },
     { label: 'Realtors Team', href: '/realtors' },
     { label: 'Motivational Team', href: '/motivational' },

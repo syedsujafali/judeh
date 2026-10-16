@@ -602,6 +602,52 @@ img {
   border-color: var(--bento-gold);
 }
 
+/* Medium Image Container & Showcase */
+.bento-img-medium {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.bento-img-medium:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+}
+
+.bento-img-medium img {
+  object-fit: cover !important;
+  transition: transform 0.35s ease;
+}
+
+.bento-img-medium:hover img {
+  transform: scale(1.03);
+}
+
+.bento-img-contain {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.bento-img-contain img {
+  object-fit: contain !important;
+}
+
 /* Quotes */
 .bento-quote-item {
   background: #ffffff;
@@ -611,6 +657,7 @@ img {
   margin-bottom: 1.25rem;
   box-shadow: var(--shadow-bento);
 }
+
 
 .bento-quote-item p {
   font-style: italic;

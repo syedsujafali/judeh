@@ -77,26 +77,24 @@ export default function HomePage() {
               </div>
 
               {/* Photo Showcase from Facebook / Field Practice */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
-                <div style={{ position: 'relative', height: '140px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.5rem' }}>
+                <div className="bento-img-medium" style={{ height: '200px' }}>
                   <Image 
                     src="/images/fb-property-taxes.jpg" 
                     alt="Property Tax Valuation" 
                     fill 
-                    style={{ objectFit: 'cover' }}
                   />
-                  <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '4px 8px', background: 'rgba(9,14,23,0.7)', color: '#fff', fontSize: '0.75rem', fontWeight: 700 }}>
+                  <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '8px 12px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.85rem', fontWeight: 700 }}>
                     Tax Appeals &amp; Assessments
                   </div>
                 </div>
-                <div style={{ position: 'relative', height: '140px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0' }}>
+                <div className="bento-img-medium" style={{ height: '200px' }}>
                   <Image 
                     src="/images/fb-market-trends.jpg" 
                     alt="Market Trends Analysis" 
                     fill 
-                    style={{ objectFit: 'cover' }}
                   />
-                  <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '4px 8px', background: 'rgba(9,14,23,0.7)', color: '#fff', fontSize: '0.75rem', fontWeight: 700 }}>
+                  <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '8px 12px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.85rem', fontWeight: 700 }}>
                     Market Intelligence
                   </div>
                 </div>
@@ -111,7 +109,7 @@ export default function HomePage() {
             <div className="bento-card bento-card-dark bento-span-5">
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <span className="bento-badge-tag">Firm Leadership</span>
-                <div style={{ position: 'relative', width: '56px', height: '56px', borderRadius: '50%', overflow: 'hidden', border: '2px solid var(--bento-gold)' }}>
+                <div style={{ position: 'relative', width: '64px', height: '64px', borderRadius: '50%', overflow: 'hidden', border: '2.5px solid var(--bento-gold)', flexShrink: 0 }}>
                   <Image 
                     src="/images/jumana-avatar-hd.jpg" 
                     alt="Jumana Judeh, MAI, CCIM" 
@@ -161,14 +159,13 @@ export default function HomePage() {
               </p>
 
               {/* Real Estate Building Photo from Facebook */}
-              <div style={{ position: 'relative', height: '160px', borderRadius: 'var(--radius-md)', overflow: 'hidden', marginBottom: '1.25rem', border: '1px solid #e2e8f0' }}>
+              <div className="bento-img-medium" style={{ height: '220px', marginBottom: '1.5rem' }}>
                 <Image 
                   src="/images/fb-cover-building.jpg" 
                   alt="Michigan Commercial and Residential Properties" 
                   fill 
-                  style={{ objectFit: 'cover' }}
                 />
-                <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '6px 12px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.8rem', fontWeight: 600 }}>
+                <div style={{ position: 'absolute', bottom: 0, insetInline: 0, padding: '8px 14px', background: 'linear-gradient(transparent, rgba(9,14,23,0.85))', color: '#fff', fontSize: '0.875rem', fontWeight: 600 }}>
                   Commercial, Multi-Family &amp; Retail Transactions
                 </div>
               </div>
@@ -203,21 +200,19 @@ export default function HomePage() {
               </p>
 
               {/* Live Speaker Photo from engagements */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.25rem' }}>
-                <div style={{ position: 'relative', height: '140px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0', background: '#f8fafc' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
+                <div className="bento-img-contain" style={{ height: '220px' }}>
                   <Image 
                     src="/images/jumana-speaker1.png" 
                     alt="Jumana Judeh Keynote" 
                     fill 
-                    style={{ objectFit: 'contain', padding: '6px' }}
                   />
                 </div>
-                <div style={{ position: 'relative', height: '140px', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid #e2e8f0', background: '#f8fafc' }}>
+                <div className="bento-img-contain" style={{ height: '220px' }}>
                   <Image 
                     src="/images/jumana-speaker2.png" 
                     alt="Jumana Judeh Leadership" 
                     fill 
-                    style={{ objectFit: 'contain', padding: '6px' }}
                   />
                 </div>
               </div>
