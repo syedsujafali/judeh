@@ -470,6 +470,40 @@ export default function HomePage() {
                     <a href="mailto:Admin@JudehOnLine.com" style={{ color: 'var(--bento-crimson)', fontWeight: 700 }}>Admin@JudehOnLine.com</a>
                   </p>
                 </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+                  <div>
+                    <h5 style={{ fontSize: '0.85rem', color: 'var(--bento-gold)', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.1em', marginBottom: '0.35rem' }}>
+                      Hours of Operation
+                    </h5>
+                    <p style={{ color: 'var(--bento-text-main)', fontSize: '0.95rem', lineHeight: 1.5 }}>
+                      Monday – Friday<br />8:30 AM – 5:30 PM EST
+                    </p>
+                  </div>
+
+                  <div>
+                    <h5 style={{ fontSize: '0.85rem', color: 'var(--bento-gold)', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.1em', marginBottom: '0.35rem' }}>
+                      Statewide Coverage
+                    </h5>
+                    <p style={{ color: 'var(--bento-text-main)', fontSize: '0.95rem', lineHeight: 1.5 }}>
+                      All 83 Michigan Counties<br />Wayne, Oakland, Macomb &amp; beyond
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ marginTop: '0.5rem', padding: '1.15rem 1.35rem', background: '#f8fafc', borderRadius: 'var(--radius-md)', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--bento-crimson)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem', flexShrink: 0 }}>
+                    ⚡
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 700, fontSize: '0.925rem', color: 'var(--bento-obsidian)' }}>
+                      Guaranteed 24-Hour Inquiry Response
+                    </div>
+                    <div style={{ fontSize: '0.825rem', color: '#64748b' }}>
+                      Direct engagement with senior appraisers and MAI designated leadership.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

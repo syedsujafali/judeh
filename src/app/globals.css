@@ -1140,7 +1140,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  margin: 4.5rem 0;
+  margin: 3.5rem 0 1.5rem;
 }
 
 .bento-contact-card {
@@ -1207,8 +1207,8 @@ img {
 .bento-footer {
   background-color: var(--bento-dark);
   color: var(--bento-text-light);
-  padding: 5rem 0 2rem;
-  margin-top: 5rem;
+  padding: 4rem 0 2rem;
+  margin-top: 1.5rem;
   border-top: 1px solid var(--bento-dark-border);
 }
 
