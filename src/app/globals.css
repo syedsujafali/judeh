@@ -921,16 +921,8 @@ img {
 }
 
 @media (max-width: 768px) {
-  .lux-topbar-inner {
-    justify-content: center;
-    text-align: center;
-    gap: 0.5rem;
-  }
-
-  .lux-topbar-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  .lux-topbar {
+    display: none !important;
   }
 
   .lux-nav-inner {
